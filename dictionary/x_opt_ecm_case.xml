@@ -1,4 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" type="collection"/>
+    <element attributes="live_feed=true" extends="sn_customerservice_case" label="Complaint" max_length="40" name="x_opt_ecm_case" sizeclass="2" type="collection">
+        <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
+        <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
+            <choice>
+                <element label="Yes" sequence="0" value="Yes"/>
+                <element label="No" sequence="1" value="No"/>
+            </choice>
+        </element>
+        <element label="Ack Letter Completed date" max_length="40" name="ack_letter_completed_date" type="glide_date"/>
+        <element label="Ack Letter Due Date" max_length="40" name="ack_letter_due_date" type="glide_date"/>
+        <element choice="1" label="Ack Letter Required" max_length="40" name="ack_letter_required" type="choice">
+            <choice>
+                <element label="Yes" sequence="0" value="Yes"/>
+                <element label="No" sequence="1" value="No"/>
+            </choice>
+        </element>
+        <element choice="1" label="Business Unit" max_length="40" name="business_unit" type="choice">
+            <choice>
+                <element label="Consumer Affairs" sequence="0" value="Consumer Affairs"/>
+                <element label="Regulatory Affairs" sequence="1" value="Regulatory Affairs"/>
+            </choice>
+        </element>
+        <element label="Date on Correspondence" max_length="40" name="correspondence_received_date" type="glide_date"/>
+        <element choice="1" label="DOI Complaint" max_length="40" name="doi_complaint" type="choice">
+            <choice>
+                <element label="Yes" sequence="0" value="Yes"/>
+                <element label="No" sequence="1" value="No"/>
+            </choice>
+        </element>
+        <element label="DOI State" max_length="32" name="doi_state" reference="x_opt_im_state_location" reference_qual="parent=0e55153437d0200044e0bfc8bcbe5d9d^EQ" reference_qual_condition="parent=0e55153437d0200044e0bfc8bcbe5d9d^EQ" type="reference"/>
+        <element label="Executive" max_length="32" name="executive" reference="sys_user" type="reference"/>
+        <element label="Executive Group" max_length="32" name="executive_group" reference="sys_user_group" type="reference"/>
+        <element label="Executive Summary" max_length="4000" name="executive_summary" type="journal_input"/>
+        <element label="File Number" max_length="40" name="file_number" type="string"/>
+        <element label="Intake Comments" max_length="4000" name="intake_comments" type="journal_input"/>
+        <element choice="1" label="Modification Reason" max_length="40" name="modification_reason" type="choice">
+            <choice>
+                <element label="Appeal" sequence="0" value="Appeal"/>
+                <element label="Follow up" sequence="1" value="Follow up"/>
+                <element label="Extension request" sequence="2" value="Extension request"/>
+            </choice>
+        </element>
+        <element label="Modified Due Date" max_length="40" name="modified_due_date" type="glide_date"/>
+        <element label="OCA Received" max_length="40" name="oca_received_date" type="glide_date"/>
+        <element label="Provider" max_length="32" name="provider" reference="x_opt_im_provider" type="reference"/>
+        <element label="Responsible Department" max_length="32" name="responsible_department" reference="cmn_department" reference_qual="parent=2308c16c4fa40b00699aacb14210c71e^EQ" reference_qual_condition="parent=2308c16c4fa40b00699aacb14210c71e^EQ" type="reference"/>
+        <element label="Submission Source" max_length="32" name="submission_source" reference="x_opt_ecm_submission_source" type="reference"/>
+        <element choice="1" label="Submitted on behalf of" max_length="40" name="submitted_on_behalf_of" type="choice">
+            <choice/>
+        </element>
+        <element label="Submitter Country" max_length="40" name="submitter_country" type="string"/>
+        <element label="Submitter First name" max_length="40" name="submitter_first_name" type="string"/>
+        <element label="Submitter Group name" max_length="40" name="submitter_group_name" type="string"/>
+        <element label="Submitter Group number" max_length="40" name="submitter_group_number" type="string"/>
+        <element label="Submitter Last name" max_length="40" name="submitter_last_name" type="string"/>
+        <element label="Submitter OBO First name" max_length="40" name="submitter_obo_first_name" type="string"/>
+        <element label="Submitter OBO Last name" max_length="40" name="submitter_obo_last_name" type="string"/>
+        <element choice="1" label="Submitter relationship" max_length="40" name="submitter_relationship" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Transaction Source" max_length="40" name="transaction_source" type="choice">
+            <choice>
+                <element label="Verbal" sequence="0" value="Verbal"/>
+                <element label="Written" sequence="1" value="Written"/>
+            </choice>
+        </element>
+        <element label="UHG Received" max_length="40" name="uhg_received_date" type="glide_date"/>
+        <element choice="1" label="Written Source" max_length="40" name="written_source" type="choice">
+            <choice>
+                <element label="Email" sequence="0" value="Email"/>
+                <element label="Paper" sequence="1" value="Paper"/>
+                <element label="Fax" sequence="2" value="Fax"/>
+                <element label="Online" sequence="3" value="Online"/>
+            </choice>
+        </element>
+    </element>
 </database>
