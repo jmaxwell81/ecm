@@ -12,7 +12,7 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>todd.fudala</sys_created_by>
             <sys_created_on>2017-08-09 19:00:46</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_customer_update>false</sys_customer_update>
             <sys_id>97cf51684fe40b00699aacb14210c79d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Ack Letter Due Date</sys_name>

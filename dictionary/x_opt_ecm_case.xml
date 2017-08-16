@@ -1,74 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true,email_client=true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="8" type="collection">
+    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="4" type="collection">
         <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
         <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
             <choice>
-                <element label="Yes" sequence="0" value="Yes"/>
-                <element label="No" sequence="1" value="No"/>
+                <element label="Yes" sequence="0" value="yes"/>
+                <element label="No" sequence="1" value="no"/>
             </choice>
         </element>
         <element label="Ack Letter Completed date" max_length="40" name="ack_letter_completed_date" type="glide_date"/>
         <element label="Ack Letter Due Date" max_length="40" name="ack_letter_due_date" type="glide_date"/>
         <element choice="1" label="Ack Letter Required" max_length="40" name="ack_letter_required" type="choice">
             <choice>
-                <element label="Yes" sequence="0" value="Yes"/>
-                <element label="No" sequence="1" value="No"/>
+                <element label="Yes" sequence="0" value="yes"/>
+                <element label="No" sequence="1" value="no"/>
             </choice>
         </element>
+        <element label="Advocate Comments" max_length="4000" name="advocate_comments" type="journal_input"/>
         <element choice="1" label="Business Unit" max_length="40" name="business_unit" type="choice">
             <choice>
-                <element label="Consumer Affairs" sequence="0" value="Consumer Affairs"/>
-                <element label="Regulatory Affairs" sequence="1" value="Regulatory Affairs"/>
+                <element label="Consumer Affairs" sequence="0" value="consumer_affairs"/>
+                <element label="Regulatory Affairs" sequence="1" value="regulatory_affairs"/>
             </choice>
         </element>
-        <element label="Complaint Type" max_length="32" name="complaint_type" reference="x_opt_ecm_complaint_type" type="reference"/>
+        <element choice="1" label="Complaint Type" max_length="32" name="complaint_type" reference="x_opt_ecm_complaint_type" type="reference">
+            <choice/>
+        </element>
+        <element label="Contact Address 1" max_length="40" name="contact_address_1" type="string"/>
+        <element label="Contact Address 2" max_length="40" name="contact_address_2" type="string"/>
+        <element label="Contact City" max_length="40" name="contact_city" type="string"/>
+        <element label="Contact Country" max_length="40" name="contact_country" type="string"/>
+        <element label="Contact Email Address" max_length="40" name="contact_email_address" type="string"/>
+        <element label="Contact Fax" max_length="40" name="contact_fax" type="string"/>
+        <element label="Contact First Name" max_length="40" name="contact_first_name" type="string"/>
+        <element label="Contact Foreign Address" max_length="40" name="contact_foreign_address" type="string"/>
+        <element label="Contact Group Name" max_length="40" name="contact_group_name" type="string"/>
+        <element label="Contact Group Number" max_length="40" name="contact_group_number" type="string"/>
+        <element label="Contact Last Name" max_length="40" name="contact_last_name" type="string"/>
+        <element label="Contact OBO First Name" max_length="40" name="contact_obo_first_name" type="string"/>
+        <element label="Contact OBO Last Name" max_length="40" name="contact_obo_last_name" type="string"/>
+        <element label="Contact Phone" max_length="40" name="contact_phone" type="string"/>
+        <element label="Contact Postal Code" max_length="40" name="contact_postal_code" type="string"/>
+        <element choice="1" label="Contact Relationship" max_length="40" name="contact_relationship" type="choice">
+            <choice>
+                <element label="Agent/Broker" sequence="0" value="Agent/Broker"/>
+                <element label="Applicant (Not yet enrolled)" sequence="1" value="Applicant (Not yet enrolled)"/>
+                <element label="Attorney" sequence="2" value="Attorney"/>
+                <element label="Attorney General" sequence="3" value="Attorney General"/>
+                <element label="Billing/Collection Agency" sequence="4" value="Billing/Collection Agency"/>
+                <element label="Insured/Participant" sequence="5" value="Insured/Participant"/>
+                <element label="Legislator (Gvt. Official, Senator)" sequence="6" value="Legislator (Gvt. Official, Senator)"/>
+                <element label="Non-insurance Customer" sequence="7" value="Non-insurance Customer"/>
+                <element label="Other" sequence="8" value="Other"/>
+                <element label="Physician and Provider Service" sequence="9" value="Physician and Provider Service"/>
+                <element label="Policyowner/Trustee/Group" sequence="10" value="Policyowner/Trustee/Group"/>
+                <element label="Regulator (DOI, Auditor, IURO, IPRO)" sequence="11" value="Regulator (DOI, Auditor, IURO, IPRO)"/>
+                <element label="Spouse/Relative (uninsured relative to enrollee)" sequence="12" value="Spouse/Relative (uninsured relative to enrollee)"/>
+                <element label="Third Party Claimant (Another Ins. Carrier)" sequence="13" value="Third Party Claimant (Another Ins. Carrier)"/>
+            </choice>
+        </element>
+        <element label="Contact State" max_length="40" name="contact_state" type="string"/>
         <element label="Date on Correspondence" max_length="40" name="correspondence_received_date" type="glide_date"/>
         <element choice="1" label="DOI Complaint" max_length="40" name="doi_complaint" type="choice">
             <choice>
-                <element label="Yes" sequence="0" value="Yes"/>
-                <element label="No" sequence="1" value="No"/>
+                <element label="Yes" sequence="0" value="yes"/>
+                <element label="No" sequence="1" value="no"/>
             </choice>
         </element>
         <element label="DOI State" max_length="32" name="doi_state" reference="x_opt_im_state_location" reference_qual="parent=0e55153437d0200044e0bfc8bcbe5d9d^EQ" reference_qual_condition="parent=0e55153437d0200044e0bfc8bcbe5d9d^EQ" type="reference"/>
         <element label="Executive" max_length="32" name="executive" reference="sys_user" type="reference"/>
-        <element label="Executive Department" max_length="32" name="executive_department" reference="cmn_department" type="reference"/>
-        <element label="Executive Summary" max_length="4000" name="executive_summary" type="journal_input"/>
+        <element choice="1" label="Executive Department" max_length="32" name="executive_department" reference="x_opt_ecm_department" type="reference">
+            <choice/>
+        </element>
+        <element label="Executive Summary" max_length="4000" name="executive_summary" type="string"/>
         <element label="File Number" max_length="40" name="file_number" type="string"/>
         <element label="Intake Comments" max_length="4000" name="intake_comments" type="journal_input"/>
+        <element choice="1" label="Market Business" max_length="40" name="market_business" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Market Erisa" max_length="40" name="market_erisa" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Market Funding" max_length="40" name="market_funding" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Market Health Plan" max_length="40" name="market_health_plan" type="choice">
+            <choice/>
+        </element>
+        <element label="Market Legal Entity" max_length="40" name="market_legal_entity" type="string"/>
+        <element choice="1" label="Market Product" max_length="40" name="market_product" type="choice">
+            <choice/>
+        </element>
+        <element label="Market State of Situs" max_length="32" name="market_state_of_situs" reference="x_opt_im_state_location" type="reference"/>
+        <element label="Member Alt ID" max_length="40" name="member_alt_id" type="string"/>
+        <element label="Member DOB" max_length="40" name="member_dob" type="glide_date"/>
+        <element label="Member First Name" max_length="40" name="member_first_name" type="string"/>
+        <element label="Member Group Name" max_length="40" name="member_group_name" type="string"/>
+        <element label="Member Group Number" max_length="40" name="member_group_number" type="string"/>
+        <element label="Member Last Name" max_length="40" name="member_last_name" type="string"/>
+        <element label="Member SSN" max_length="40" name="member_ssn" type="string"/>
         <element choice="1" label="Modification Reason" max_length="40" name="modification_reason" type="choice">
             <choice>
-                <element label="Appeal" sequence="0" value="Appeal"/>
-                <element label="Follow up" sequence="1" value="Follow up"/>
-                <element label="Extension request" sequence="2" value="Extension request"/>
+                <element label="Appeal" sequence="0" value="appeal"/>
+                <element label="Follow up" sequence="1" value="follow_up"/>
+                <element label="Extension request" sequence="2" value="extension_request"/>
             </choice>
         </element>
         <element label="Modified Due Date" max_length="40" name="modified_due_date" type="glide_date"/>
+        <element label="M First Name" max_length="40" name="m_first_name" type="string"/>
         <element label="OCA Received" max_length="40" name="oca_received_date" type="glide_date"/>
+        <element choice="1" label="Platform" max_length="40" name="platform" type="choice">
+            <choice>
+                <element label="Iris (mail order)" sequence="0" value="Iris (mail order)"/>
+                <element label="RxHD (drug related)" sequence="1" value="RxHD (drug related)"/>
+                <element label="UNET (UHC claims)" sequence="2" value="UNET (UHC claims)"/>
+                <element label="Cosmos" sequence="3" value="Cosmos"/>
+                <element label="Facets" sequence="4" value="Facets"/>
+                <element label="Oxford" sequence="5" value="Oxford"/>
+                <element label="Diamond" sequence="6" value="Diamond"/>
+                <element label="PRIME" sequence="7" value="PRIME"/>
+                <element label="Other" sequence="8" value="Other"/>
+            </choice>
+        </element>
         <element label="Provider" max_length="32" name="provider" reference="x_opt_im_provider" type="reference"/>
         <element label="Referred by" max_length="32" name="referred_by" reference="sys_user" type="reference"/>
-        <element label="Responsible Department" max_length="32" name="responsible_department" reference="cmn_department" reference_qual="parent=2308c16c4fa40b00699aacb14210c71e^EQ" reference_qual_condition="parent=2308c16c4fa40b00699aacb14210c71e^EQ" type="reference"/>
-        <element label="Submission Source" max_length="32" name="submission_source" reference="x_opt_ecm_submission_source" type="reference"/>
-        <element choice="1" label="Submitted on behalf of" max_length="40" name="submitted_on_behalf_of" type="choice">
+        <element label="Responsible Department" max_length="32" name="responsible_department" reference="x_opt_ecm_department" reference_qual="parent=2308c16c4fa40b00699aacb14210c71e^EQ" reference_qual_condition="parent=2308c16c4fa40b00699aacb14210c71e^EQ" type="reference"/>
+        <element choice="1" label="Submission Source" max_length="32" name="submission_source" reference="x_opt_ecm_submission_source" type="reference">
             <choice/>
         </element>
-        <element label="Submitter Country" max_length="40" name="submitter_country" type="string"/>
-        <element label="Submitter First name" max_length="40" name="submitter_first_name" type="string"/>
-        <element label="Submitter Group name" max_length="40" name="submitter_group_name" type="string"/>
-        <element label="Submitter Group number" max_length="40" name="submitter_group_number" type="string"/>
-        <element label="Submitter Last name" max_length="40" name="submitter_last_name" type="string"/>
-        <element label="Submitter OBO First name" max_length="40" name="submitter_obo_first_name" type="string"/>
-        <element label="Submitter OBO Last name" max_length="40" name="submitter_obo_last_name" type="string"/>
-        <element choice="1" label="Submitter relationship" max_length="40" name="submitter_relationship" type="choice">
+        <element choice="1" label="Submitted on behalf of" max_length="40" name="submitted_on_behalf_of" reference="x_opt_ecm_submitted_obo" type="reference">
             <choice/>
         </element>
         <element choice="1" label="Transaction Source" max_length="40" name="transaction_source" type="choice">
             <choice>
-                <element label="Verbal" sequence="0" value="Verbal"/>
-                <element label="Written" sequence="1" value="Written"/>
+                <element label="Verbal" sequence="0" value="verbal"/>
+                <element label="Written" sequence="1" value="written"/>
             </choice>
         </element>
         <element label="UHG Received" max_length="40" name="uhg_received_date" type="glide_date"/>
+        <element label="UNET Market" max_length="40" name="unet_market" type="string"/>
+        <element choice="1" label="Verbal Source" max_length="40" name="verbal_source" type="choice">
+            <choice>
+                <element label="800#" sequence="0" value="800#"/>
+                <element label="Other Verbal" sequence="1" value="other_verbal"/>
+            </choice>
+        </element>
         <element choice="1" label="Written Source" max_length="40" name="written_source" type="choice">
             <choice>
                 <element label="Email" sequence="0" value="Email"/>

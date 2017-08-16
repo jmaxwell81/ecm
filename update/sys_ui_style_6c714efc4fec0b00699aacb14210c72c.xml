@@ -7,7 +7,7 @@
         <sys_class_name>sys_ui_style</sys_class_name>
         <sys_created_by>todd.fudala</sys_created_by>
         <sys_created_on>2017-08-10 16:09:01</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>6c714efc4fec0b00699aacb14210c72c</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>x_opt_ecm_case</sys_name>

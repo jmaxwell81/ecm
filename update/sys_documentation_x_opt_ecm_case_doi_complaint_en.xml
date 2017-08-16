@@ -12,7 +12,7 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>todd.fudala</sys_created_by>
             <sys_created_on>2017-08-09 17:03:53</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_customer_update>false</sys_customer_update>
             <sys_id>570589a84fa40b00699aacb14210c7e7</sys_id>
             <sys_mod_count>1</sys_mod_count>
             <sys_name>DOI Complaint</sys_name>

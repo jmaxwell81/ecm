@@ -12,7 +12,7 @@
         <sys_class_name>sys_process_flow</sys_class_name>
         <sys_created_by>todd.fudala</sys_created_by>
         <sys_created_on>2017-08-10 03:05:28</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>4eae0bac4fa80b00699aacb14210c78e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Assigned</sys_name>

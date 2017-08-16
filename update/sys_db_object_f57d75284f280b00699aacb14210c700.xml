@@ -21,7 +21,7 @@
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_created_by>todd.fudala</sys_created_by>
         <sys_created_on>2017-08-09 21:11:40</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>f57d75284f280b00699aacb14210c700</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Submission Source</sys_name>

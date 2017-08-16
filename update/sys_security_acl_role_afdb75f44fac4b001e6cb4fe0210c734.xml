@@ -4,7 +4,7 @@
         <sys_class_name>sys_security_acl_role</sys_class_name>
         <sys_created_by>craig.leonard</sys_created_by>
         <sys_created_on>2017-08-10 15:45:46</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>afdb75f44fac4b001e6cb4fe0210c734</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_opt_ecm_case.x_opt_ecm.read_only</sys_name>

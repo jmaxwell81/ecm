@@ -12,7 +12,7 @@
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>todd.fudala</sys_created_by>
         <sys_created_on>2017-08-09 21:11:40</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>7ccdf5284f280b00699aacb14210c708</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_opt_ecm_submission_source</sys_name>
