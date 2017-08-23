@@ -41,7 +41,7 @@
         <sys_created_on>2017-08-18 21:06:08</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_domain_path>/</sys_domain_path>
+        <sys_domain_path/>
         <sys_id>d86214ab4f2cc300699aacb14210c716</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Change state on save</sys_name>

@@ -125,8 +125,23 @@
         <element label="Provider" max_length="32" name="provider" reference="x_opt_im_provider" type="reference"/>
         <element label="Referred by" max_length="32" name="referred_by" reference="sys_user" type="reference"/>
         <element label="Responsible Department" max_length="32" name="responsible_department" reference="x_opt_ecm_department" reference_qual="parent=2308c16c4fa40b00699aacb14210c71e^EQ" reference_qual_condition="parent=2308c16c4fa40b00699aacb14210c71e^EQ" type="reference"/>
-        <element choice="1" label="Submission Source" max_length="32" name="submission_source" reference="x_opt_ecm_submission_source" type="reference">
-            <choice/>
+        <element choice="1" dependent="business_unit" dependent_on_field="business_unit" label="Submission Source" max_length="40" name="submission_source" type="choice" use_dependent_field="true">
+            <choice>
+                <element dependent_value="consumer_affairs" label="Attorney" value="attorney"/>
+                <element dependent_value="regulatory_affairs" label="Attorney General" value="attorney_general"/>
+                <element dependent_value="consumer_affairs" label="BBB" value="bbb"/>
+                <element dependent_value="regulatory_affairs" label="DOH" value="doh"/>
+                <element dependent_value="regulatory_affairs" label="DOL" value="dol"/>
+                <element dependent_value="consumer_affairs" label="Ethics &amp; Integrity" value="ethics_and_integrity"/>
+                <element dependent_value="regulatory_affairs" label="External Review" value="external_review"/>
+                <element dependent_value="regulatory_affairs" label="Medical Society" value="medical_society"/>
+                <element dependent_value="regulatory_affairs" label="Misc. State Agency" value="misc_state_agency"/>
+                <element dependent_value="regulatory_affairs" label="OCR - Regulatory Office" value="ocr_regulatory_office"/>
+                <element dependent_value="regulatory_affairs" label="Ombudsman" value="ombudsman"/>
+                <element dependent_value="regulatory_affairs" label="Other" value="other"/>
+                <element dependent_value="consumer_affairs" label="Other" value="other"/>
+                <element dependent_value="regulatory_affairs" label="State Exchange" value="state_exchange"/>
+            </choice>
         </element>
         <element choice="1" label="Submitted on behalf of" max_length="40" name="submitted_on_behalf_of" reference="x_opt_ecm_submitted_obo" type="reference">
             <choice/>
