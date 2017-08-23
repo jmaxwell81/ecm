@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="4" type="collection">
+    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="19" type="collection">
         <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
         <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
             <choice>
@@ -68,7 +68,7 @@
             </choice>
         </element>
         <element label="DOI State" max_length="32" name="doi_state" reference="x_opt_im_state_location" reference_qual="parent=0e55153437d0200044e0bfc8bcbe5d9d^EQ" reference_qual_condition="parent=0e55153437d0200044e0bfc8bcbe5d9d^EQ" type="reference"/>
-        <element label="Executive" max_length="32" name="executive" reference="sys_user" type="reference"/>
+        <element label="Executive" max_length="32" name="executive" reference="sys_user" reference_qual="u_job_grade=ELT^EQ" reference_qual_condition="u_job_grade=ELT^EQ" type="reference"/>
         <element choice="1" label="Executive Department" max_length="32" name="executive_department" reference="x_opt_ecm_department" type="reference">
             <choice/>
         </element>
@@ -108,7 +108,7 @@
         </element>
         <element label="Modified Due Date" max_length="40" name="modified_due_date" type="glide_date"/>
         <element label="M First Name" max_length="40" name="m_first_name" type="string"/>
-        <element label="OCA Received" max_length="40" name="oca_received_date" type="glide_date"/>
+        <element label="OCA/ORA Received" max_length="40" name="oca_received_date" type="glide_date"/>
         <element choice="1" label="Platform" max_length="40" name="platform" type="choice">
             <choice>
                 <element label="Iris (mail order)" sequence="0" value="Iris (mail order)"/>
