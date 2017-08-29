@@ -7,8 +7,9 @@
         <advanced_condition/>
         <affected_field_on_event/>
         <collection>x_opt_ecm_case</collection>
-        <condition table="x_opt_ecm_case">assigned_toVALCHANGES^assigned_toISNOTEMPTY^EQ<item endquery="false" field="assigned_to" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+        <condition table="x_opt_ecm_case">assigned_toVALCHANGES^assigned_toISNOTEMPTY^priority=2^EQ<item endquery="false" field="assigned_to" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
             <item endquery="false" field="assigned_to" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="false" field="priority" goto="false" newquery="false" operator="=" or="false" value="2"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <content_type>text/html</content_type>
@@ -54,16 +55,16 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e0ada3d44fbc0b001e6cb4fe0210c73c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>ECM-Case Assigned To</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Executive Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
+        <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Executive Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
+        <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sysevent_email_action_e0ada3d44fbc0b001e6cb4fe0210c73c</sys_update_name>
         <sys_updated_by>craig.leonard</sys_updated_by>
-        <sys_updated_on>2017-08-23 04:08:29</sys_updated_on>
+        <sys_updated_on>2017-08-24 14:40:08</sys_updated_on>
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>
