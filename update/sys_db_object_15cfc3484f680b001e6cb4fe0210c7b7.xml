@@ -18,7 +18,9 @@
         <provider_class/>
         <read_access>true</read_access>
         <super_class display_value="Case" name="sn_customerservice_case">0290cfdd4f6cfa00699aacb14210c74f</super_class>
+        <sys_class_code/>
         <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
         <sys_created_by>craig.leonard</sys_created_by>
         <sys_created_on>2017-08-08 13:53:08</sys_created_on>
         <sys_customer_update>true</sys_customer_update>

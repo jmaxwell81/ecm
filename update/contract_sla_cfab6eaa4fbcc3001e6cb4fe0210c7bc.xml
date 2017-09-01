@@ -51,6 +51,7 @@
         <sys_update_name>contract_sla_cfab6eaa4fbcc3001e6cb4fe0210c7bc</sys_update_name>
         <sys_updated_by>john.daniel</sys_updated_by>
         <sys_updated_on>2017-08-30 17:42:50</sys_updated_on>
+        <target/>
         <timezone/>
         <timezone_source>task.caller_id.time_zone</timezone_source>
         <type>SLA</type>
