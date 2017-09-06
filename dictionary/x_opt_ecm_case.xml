@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="67" type="collection">
+    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="79" type="collection">
         <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
         <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
             <choice>
@@ -108,9 +108,19 @@
             </choice>
         </element>
         <element choice="1" label="Health Plan" max_length="40" name="market_health_plan" type="choice">
-            <choice/>
+            <choice>
+                <element label="Aetna" sequence="0" value="Aetna"/>
+                <element label="Blue Cross" sequence="1" value="Blue Cross"/>
+                <element label="Cigna" sequence="2" value="Cigna"/>
+                <element label="Medica" sequence="3" value="Medica"/>
+                <element label="Oscar" sequence="4" value="Oscar"/>
+                <element label="Other" sequence="5" value="Other"/>
+                <element label="Oxford" sequence="6" value="Oxford"/>
+                <element label="UHC" sequence="7" value="UHC"/>
+                <element label="NA" sequence="8" value="NA"/>
+            </choice>
         </element>
-        <element label="Legal Entity" max_length="40" name="market_legal_entity" type="string"/>
+        <element label="Legal Entity" max_length="32" name="market_legal_entity" reference="x_opt_ecm_market_legal_entity" type="reference"/>
         <element choice="1" label="Product" max_length="40" name="market_product" type="choice">
             <choice>
                 <element label="Catamaran" sequence="0" value="Catamaran"/>
@@ -144,14 +154,14 @@
         <element label="OCA/OCR Received Date" max_length="40" name="oca_ocr_received_date_time" type="glide_date_time"/>
         <element choice="1" label="Platform" max_length="40" name="platform" type="choice">
             <choice>
-                <element label="Iris (mail order)" sequence="0" value="Iris (mail order)"/>
-                <element label="RxHD (drug related)" sequence="1" value="RxHD (drug related)"/>
-                <element label="UNET (UHC claims)" sequence="2" value="UNET (UHC claims)"/>
-                <element label="Cosmos" sequence="3" value="Cosmos"/>
-                <element label="Facets" sequence="4" value="Facets"/>
-                <element label="Oxford" sequence="5" value="Oxford"/>
-                <element label="Diamond" sequence="6" value="Diamond"/>
-                <element label="PRIME" sequence="7" value="PRIME"/>
+                <element label="Cosmos" sequence="0" value="Cosmos"/>
+                <element label="Diamond" sequence="1" value="Diamond"/>
+                <element label="Facets" sequence="2" value="Facets"/>
+                <element label="Iris (mail order)" sequence="3" value="Iris (mail order)"/>
+                <element label="Oxford" sequence="4" value="Oxford"/>
+                <element label="PRIME" sequence="5" value="PRIME"/>
+                <element label="RxHD (drug related)" sequence="6" value="RxHD (drug related)"/>
+                <element label="UNET (UHC claims)" sequence="7" value="UNET (UHC claims)"/>
                 <element label="Other" sequence="8" value="Other"/>
             </choice>
         </element>
@@ -194,7 +204,7 @@
             </choice>
         </element>
         <element label="UHG Received" max_length="40" name="uhg_received_date" type="glide_date"/>
-        <element label="UNET Market" max_length="40" name="unet_market" type="string"/>
+        <element label="UNET Market" max_length="32" name="unet_market" reference="x_opt_ecm_unet_market" type="reference"/>
         <element choice="1" label="Verbal Source" max_length="40" name="verbal_source" type="choice">
             <choice>
                 <element label="800#" sequence="0" value="800#"/>

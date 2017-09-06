@@ -6,19 +6,114 @@
             <element>platform</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Iris (mail order)</label>
+            <label>Cosmos</label>
             <language>en</language>
             <name>x_opt_ecm_case</name>
             <sequence>0</sequence>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-08-14 19:07:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d1319f0e4fa04300699aacb14210c7b8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-06 04:05:13</sys_updated_on>
+            <value>Cosmos</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>platform</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Diamond</label>
+            <language>en</language>
+            <name>x_opt_ecm_case</name>
+            <sequence>1</sequence>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-08-14 19:07:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9d31134e4fa04300699aacb14210c726</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-06 04:05:13</sys_updated_on>
+            <value>Diamond</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>platform</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Facets</label>
+            <language>en</language>
+            <name>x_opt_ecm_case</name>
+            <sequence>2</sequence>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-08-14 19:07:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9d31134e4fa04300699aacb14210c722</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-06 04:05:14</sys_updated_on>
+            <value>Facets</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>platform</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Iris (mail order)</label>
+            <language>en</language>
+            <name>x_opt_ecm_case</name>
+            <sequence>3</sequence>
             <sys_created_by>todd.fudala</sys_created_by>
             <sys_created_on>2017-08-14 19:06:19</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>29015f0e4fa04300699aacb14210c78c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-14 19:06:19</sys_updated_on>
+            <sys_updated_on>2017-09-06 04:05:14</sys_updated_on>
             <value>Iris (mail order)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>platform</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Oxford</label>
+            <language>en</language>
+            <name>x_opt_ecm_case</name>
+            <sequence>4</sequence>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-08-14 19:07:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9d31134e4fa04300699aacb14210c724</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-06 04:05:14</sys_updated_on>
+            <value>Oxford</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>platform</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>PRIME</label>
+            <language>en</language>
+            <name>x_opt_ecm_case</name>
+            <sequence>5</sequence>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-08-14 19:07:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9d31134e4fa04300699aacb14210c728</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-06 04:05:14</sys_updated_on>
+            <value>PRIME</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -28,15 +123,15 @@
             <label>RxHD (drug related)</label>
             <language>en</language>
             <name>x_opt_ecm_case</name>
-            <sequence>1</sequence>
+            <sequence>6</sequence>
             <sys_created_by>todd.fudala</sys_created_by>
             <sys_created_on>2017-08-14 19:06:19</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>a9015f0e4fa04300699aacb14210c78e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-14 19:06:19</sys_updated_on>
+            <sys_updated_on>2017-09-06 04:05:14</sys_updated_on>
             <value>RxHD (drug related)</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -47,111 +142,16 @@
             <label>UNET (UHC claims)</label>
             <language>en</language>
             <name>x_opt_ecm_case</name>
-            <sequence>2</sequence>
+            <sequence>7</sequence>
             <sys_created_by>todd.fudala</sys_created_by>
             <sys_created_on>2017-08-14 19:06:19</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>69015f0e4fa04300699aacb14210c790</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-14 19:06:19</sys_updated_on>
+            <sys_updated_on>2017-09-06 04:05:14</sys_updated_on>
             <value>UNET (UHC claims)</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>platform</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Cosmos</label>
-            <language>en</language>
-            <name>x_opt_ecm_case</name>
-            <sequence>3</sequence>
-            <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-14 19:07:08</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>d1319f0e4fa04300699aacb14210c7b8</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-14 19:07:08</sys_updated_on>
-            <value>Cosmos</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>platform</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Facets</label>
-            <language>en</language>
-            <name>x_opt_ecm_case</name>
-            <sequence>4</sequence>
-            <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-14 19:07:08</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>9d31134e4fa04300699aacb14210c722</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-14 19:07:08</sys_updated_on>
-            <value>Facets</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>platform</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Oxford</label>
-            <language>en</language>
-            <name>x_opt_ecm_case</name>
-            <sequence>5</sequence>
-            <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-14 19:07:08</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>9d31134e4fa04300699aacb14210c724</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-14 19:07:08</sys_updated_on>
-            <value>Oxford</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>platform</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Diamond</label>
-            <language>en</language>
-            <name>x_opt_ecm_case</name>
-            <sequence>6</sequence>
-            <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-14 19:07:08</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>9d31134e4fa04300699aacb14210c726</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-14 19:07:08</sys_updated_on>
-            <value>Diamond</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>platform</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>PRIME</label>
-            <language>en</language>
-            <name>x_opt_ecm_case</name>
-            <sequence>7</sequence>
-            <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-14 19:07:08</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>9d31134e4fa04300699aacb14210c728</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-14 19:07:08</sys_updated_on>
-            <value>PRIME</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
