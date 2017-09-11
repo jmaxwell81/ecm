@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="79" type="collection">
+    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="92" type="collection">
         <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
         <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
             <choice>
@@ -29,7 +29,7 @@
         <element label="Contact Address 1" max_length="40" name="contact_address_1" type="string"/>
         <element label="Contact Address 2" max_length="40" name="contact_address_2" type="string"/>
         <element label="Contact City" max_length="40" name="contact_city" type="string"/>
-        <element label="Contact Country" max_length="40" name="contact_country" type="string"/>
+        <element default="dd38b7111b121100763d91eebc0713f5" label="Contact Country" max_length="32" name="contact_country" reference="core_country" type="reference"/>
         <element label="Contact Email Address" max_length="40" name="contact_email_address" type="string"/>
         <element label="Contact Fax" max_length="40" name="contact_fax" type="string"/>
         <element label="Contact First Name" max_length="40" name="contact_first_name" type="string"/>
@@ -152,6 +152,18 @@
         <element label="Modified Due Date" max_length="40" name="modified_due_date" type="glide_date"/>
         <element label="M First Name" max_length="40" name="m_first_name" type="string"/>
         <element label="OCA/OCR Received Date" max_length="40" name="oca_ocr_received_date_time" type="glide_date_time"/>
+        <element label="Patient Address 1" max_length="40" name="patient_address_1" type="string"/>
+        <element label="Patient Address 2" max_length="40" name="patient_address_2" type="string"/>
+        <element label="Patient City" max_length="40" name="patient_city" type="string"/>
+        <element label="Patient Country" max_length="32" name="patient_country" reference="core_country" type="reference"/>
+        <element label="Patient DOB" max_length="40" name="patient_dob" type="glide_date"/>
+        <element label="Patient First Name" max_length="40" name="patient_first_name" type="string"/>
+        <element label="Patient Gender" max_length="40" name="patient_gender" type="string"/>
+        <element label="Patient Last Name" max_length="40" name="patient_last_name" type="string"/>
+        <element label="Patient Middle Initial" max_length="40" name="patient_middle_initial" type="string"/>
+        <element label="Patient Phone Number" max_length="40" name="patient_phone_number" type="string"/>
+        <element label="Patient Postal Code" max_length="40" name="patient_postal_code" type="string"/>
+        <element label="Patient State" max_length="40" name="patient_state" type="string"/>
         <element choice="1" label="Platform" max_length="40" name="platform" type="choice">
             <choice>
                 <element label="Cosmos" sequence="0" value="Cosmos"/>
