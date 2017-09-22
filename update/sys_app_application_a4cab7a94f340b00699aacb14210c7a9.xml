@@ -8,7 +8,7 @@
         <hint/>
         <name>x_opt_ecm_escalated complaint management</name>
         <order>100</order>
-        <roles>admin,x_opt_ecm.admin</roles>
+        <roles>admin,x_opt_ecm.admin,x_opt_ecm.user</roles>
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>todd.fudala</sys_created_by>
         <sys_created_on>2017-08-25 19:07:24</sys_created_on>
@@ -16,7 +16,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a4cab7a94f340b00699aacb14210c7a9</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>ECM Administration</sys_name>
         <sys_overrides/>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
@@ -25,7 +25,7 @@
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_app_application_a4cab7a94f340b00699aacb14210c7a9</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-09-06 14:30:38</sys_updated_on>
+        <sys_updated_on>2017-09-11 16:07:01</sys_updated_on>
         <title>ECM Administration</title>
         <view_name/>
     </sys_app_application>

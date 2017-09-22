@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="92" type="collection">
+    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="149" type="collection">
         <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
         <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
             <choice>
@@ -28,15 +28,20 @@
         </element>
         <element label="Contact Address 1" max_length="40" name="contact_address_1" type="string"/>
         <element label="Contact Address 2" max_length="40" name="contact_address_2" type="string"/>
+        <element label="Contact Alt ID" max_length="40" name="contact_alt_id" type="string"/>
         <element label="Contact City" max_length="40" name="contact_city" type="string"/>
         <element default="dd38b7111b121100763d91eebc0713f5" label="Contact Country" max_length="32" name="contact_country" reference="core_country" type="reference"/>
+        <element label="Contact DOB" max_length="40" name="contact_dob" type="glide_date"/>
         <element label="Contact Email Address" max_length="40" name="contact_email_address" type="string"/>
         <element label="Contact Fax" max_length="40" name="contact_fax" type="string"/>
         <element label="Contact First Name" max_length="40" name="contact_first_name" type="string"/>
-        <element label="Contact Foreign Address" max_length="40" name="contact_foreign_address" type="string"/>
+        <element label="Contact Gender" max_length="40" name="contact_gender" type="string"/>
         <element label="Contact Group Name" max_length="40" name="contact_group_name" type="string"/>
         <element label="Contact Group Number" max_length="40" name="contact_group_number" type="string"/>
+        <element label="Contact is Member" max_length="40" name="contact_is_member" type="boolean"/>
+        <element label="Contact is Patient" max_length="40" name="contact_is_patient" type="boolean"/>
         <element label="Contact Last Name" max_length="40" name="contact_last_name" type="string"/>
+        <element label="Contact Middle Initial" max_length="40" name="contact_middle_initial" type="string"/>
         <element label="Contact OBO First Name" max_length="40" name="contact_obo_first_name" type="string"/>
         <element label="Contact OBO Last Name" max_length="40" name="contact_obo_last_name" type="string"/>
         <element label="Contact Phone" max_length="40" name="contact_phone" type="string"/>
@@ -59,8 +64,9 @@
                 <element label="Third Party Claimant (Another Ins. Carrier)" sequence="13" value="Third Party Claimant (Another Ins. Carrier)"/>
             </choice>
         </element>
+        <element label="Contact SSN" max_length="40" name="contact_ssn" type="string"/>
         <element label="Contact State" max_length="40" name="contact_state" type="string"/>
-        <element label="Date on Correspondence" max_length="40" name="correspondence_received_date" type="glide_date"/>
+        <element label="Date of Correspondence" max_length="40" name="correspondence_received_date" type="glide_date"/>
         <element choice="1" label="DOI Complaint" max_length="40" name="doi_complaint" type="choice">
             <choice>
                 <element label="Yes" sequence="0" value="yes"/>
@@ -134,14 +140,25 @@
             </choice>
         </element>
         <element label="State of Situs" max_length="32" name="market_state_of_situs" reference="x_opt_im_state_location" type="reference"/>
+        <element label="Member Address 1" max_length="40" name="member_address_1" type="string"/>
+        <element label="Member Address 2" max_length="40" name="member_address_2" type="string"/>
         <element label="Member Alt ID" max_length="40" name="member_alt_id" type="string"/>
+        <element label="Member City" max_length="40" name="member_city" type="string"/>
+        <element default="dd38b7111b121100763d91eebc0713f5" label="Member Country" max_length="40" name="member_country" reference="core_country" type="reference"/>
         <element label="Member DOB" max_length="40" name="member_dob" type="glide_date"/>
+        <element label="Member Email" max_length="40" name="member_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Member Fax" max_length="40" name="member_fax" type="string"/>
         <element label="Member First Name" max_length="40" name="member_first_name" type="string"/>
+        <element label="Member Gender" max_length="40" name="member_gender" type="string"/>
         <element label="Member Group Name" max_length="40" name="member_group_name" type="string"/>
         <element label="Member Group Number" max_length="40" name="member_group_number" type="string"/>
         <element label="Member is Patient" max_length="40" name="member_is_patient" type="boolean"/>
         <element label="Member Last Name" max_length="40" name="member_last_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Member Middle Initial" max_length="40" name="member_middle_initial" type="string"/>
+        <element label="Member Phone" max_length="40" name="member_phone" type="string"/>
+        <element label="Member Postal Code" max_length="40" name="member_postal_code" type="string"/>
         <element label="Member SSN" max_length="40" name="member_ssn" type="string"/>
+        <element label="Member State" max_length="40" name="member_state" type="string"/>
         <element choice="1" label="Modification Reason" max_length="40" name="modification_reason" type="choice">
             <choice>
                 <element label="Appeal" sequence="0" value="appeal"/>
@@ -155,14 +172,17 @@
         <element label="Patient Address 1" max_length="40" name="patient_address_1" type="string"/>
         <element label="Patient Address 2" max_length="40" name="patient_address_2" type="string"/>
         <element label="Patient City" max_length="40" name="patient_city" type="string"/>
-        <element label="Patient Country" max_length="32" name="patient_country" reference="core_country" type="reference"/>
+        <element default="dd38b7111b121100763d91eebc0713f5" label="Patient Country" max_length="32" name="patient_country" reference="core_country" type="reference"/>
         <element label="Patient DOB" max_length="40" name="patient_dob" type="glide_date"/>
+        <element label="Patient Email" max_length="40" name="patient_email" type="string"/>
+        <element label="Patient Fax" max_length="40" name="patient_fax" type="string"/>
         <element label="Patient First Name" max_length="40" name="patient_first_name" type="string"/>
         <element label="Patient Gender" max_length="40" name="patient_gender" type="string"/>
         <element label="Patient Last Name" max_length="40" name="patient_last_name" type="string"/>
         <element label="Patient Middle Initial" max_length="40" name="patient_middle_initial" type="string"/>
-        <element label="Patient Phone Number" max_length="40" name="patient_phone_number" type="string"/>
+        <element label="Patient Phone" max_length="40" name="patient_phone" type="string"/>
         <element label="Patient Postal Code" max_length="40" name="patient_postal_code" type="string"/>
+        <element label="Patient SSN" max_length="40" name="patient_ssn" type="string"/>
         <element label="Patient State" max_length="40" name="patient_state" type="string"/>
         <element choice="1" label="Platform" max_length="40" name="platform" type="choice">
             <choice>
@@ -179,6 +199,50 @@
         </element>
         <element label="Provider" max_length="32" name="provider" reference="x_opt_im_provider" type="reference"/>
         <element label="Referred by" max_length="32" name="referred_by" reference="sys_user" type="reference"/>
+        <element label="Date Resolved" max_length="40" name="resolution_date_resolved" type="glide_date_time"/>
+        <element attributes="max_ref_dropdown=50" choice="1" label="Dept/Site of Error" max_length="40" name="resolution_dept_site_of_error" reference="x_opt_ecm_site_of_error" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference">
+            <choice/>
+        </element>
+        <element choice="1" label="Document Type" max_length="40" name="resolution_document_type" reference="x_opt_ecm_document_type" type="reference">
+            <choice/>
+        </element>
+        <element label="Drug Name (If Pharmacy/Rx related)" max_length="40" name="resolution_drug_name" type="string"/>
+        <element default="0" label="Fine Amount" max_length="20" name="resolution_fine_amount" type="currency"/>
+        <element attributes="max_ref_dropdown=100" choice="1" label="Issue Log" max_length="32" name="resolution_issue_log" reference="x_opt_ecm_issue_options" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference">
+            <choice/>
+        </element>
+        <element choice="1" label="Issue Originally Handled By" max_length="40" name="resolution_issue_originally_handled_by" reference="x_opt_ecm_original_issue_handler" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference">
+            <choice/>
+        </element>
+        <element label="Issue Handled By" max_length="80" name="resolution_other_issue_handler" type="string"/>
+        <element label="Department Not Listed" max_length="80" name="resolution_other_site_of_error" type="string"/>
+        <element choice="1" label="Outcome" max_length="40" name="resolution_outcome" type="choice">
+            <choice>
+                <element label="Upheld" sequence="0" value="Upheld"/>
+                <element label="Overturned - New Information" sequence="1" value="Overturned - New Information"/>
+                <element label="Overturned - Error" sequence="2" value="Overturned - Error"/>
+                <element label="Overturned - Partially" sequence="3" value="Overturned - Partially"/>
+                <element label="Overturned - Exception" sequence="4" value="Overturned - Exception"/>
+            </choice>
+        </element>
+        <element default="0" label="Prompt Pay Amount" max_length="20" name="resolution_prompt_pay_amount" type="currency"/>
+        <element label="Prompt Pay Violation" max_length="15" name="resolution_prompt_pay_violation" type="currency"/>
+        <element choice="1" label="RCA Codes" max_length="40" name="resolution_rca_codes" type="choice">
+            <choice/>
+        </element>
+        <element label="Responding Name" max_length="32" name="resolution_responding_name" reference="sys_user" type="reference"/>
+        <element choice="1" label="Response Type" max_length="40" name="resolution_response_type" type="choice">
+            <choice>
+                <element label="Verbal" sequence="0" value="Verbal"/>
+                <element label="Written" sequence="1" value="Written"/>
+            </choice>
+        </element>
+        <element label="Final Date of Service" max_length="40" name="resolution_service_end_date" type="glide_date"/>
+        <element label="Date of Service" max_length="40" name="resolution_service_start_date" type="glide_date"/>
+        <element choice="1" label="Service Type" max_length="32" name="resolution_service_type" reference="x_opt_ecm_service_type" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference">
+            <choice/>
+        </element>
+        <element label="Total overturned amounts" max_length="15" name="resolution_total_overturned_amounts" type="currency"/>
         <element label="Responsible Department" max_length="32" name="responsible_department" reference="x_opt_ecm_department" reference_qual="parent=2308c16c4fa40b00699aacb14210c71e^EQ" reference_qual_condition="parent=2308c16c4fa40b00699aacb14210c71e^EQ" type="reference"/>
         <element choice="1" dependent="business_unit" dependent_on_field="business_unit" label="Submission Source" max_length="40" name="submission_source" type="choice" use_dependent_field="true">
             <choice>

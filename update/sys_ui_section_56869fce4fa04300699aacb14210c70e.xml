@@ -5,13 +5,13 @@
             <element>member_ssn</element>
             <position>0</position>
             <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-29 18:08:35</sys_created_on>
-            <sys_id>06a3904b4f3c07001e6cb4fe0210c72b</sys_id>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>fa4e799a4f1907001e6cb4fe0210c771</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
             <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-29 18:08:35</sys_updated_on>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,139 +19,279 @@
             <element>member_alt_id</element>
             <position>1</position>
             <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-29 18:08:35</sys_created_on>
-            <sys_id>8aa3904b4f3c07001e6cb4fe0210c72b</sys_id>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>7e4e799a4f1907001e6cb4fe0210c771</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
             <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-29 18:08:35</sys_updated_on>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
             <sys_user/>
             <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>member_group_name</element>
-            <position>2</position>
-            <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-29 18:08:35</sys_created_on>
-            <sys_id>0ea3904b4f3c07001e6cb4fe0210c72b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
-            <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-29 18:08:35</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>member_group_number</element>
-            <position>3</position>
-            <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-29 18:08:35</sys_created_on>
-            <sys_id>8ea3904b4f3c07001e6cb4fe0210c72b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
-            <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-29 18:08:35</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>provider</element>
-            <position>4</position>
-            <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-29 18:08:35</sys_created_on>
-            <sys_id>02a3904b4f3c07001e6cb4fe0210c72c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
-            <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-29 18:08:35</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
-            <position>5</position>
-            <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-29 18:08:35</sys_created_on>
-            <sys_id>82a3904b4f3c07001e6cb4fe0210c72c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
-            <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-29 18:08:35</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>member_first_name</element>
-            <position>6</position>
+            <position>2</position>
             <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-29 18:08:35</sys_created_on>
-            <sys_id>06a3904b4f3c07001e6cb4fe0210c72c</sys_id>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>fe4e799a4f1907001e6cb4fe0210c771</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
             <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-29 18:08:35</sys_updated_on>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_middle_initial</element>
+            <position>3</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>724e799a4f1907001e6cb4fe0210c772</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>member_last_name</element>
-            <position>7</position>
+            <position>4</position>
             <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-29 18:08:35</sys_created_on>
-            <sys_id>86a3904b4f3c07001e6cb4fe0210c72c</sys_id>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>f24e799a4f1907001e6cb4fe0210c772</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
             <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-29 18:08:35</sys_updated_on>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_address_1</element>
+            <position>5</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>764e799a4f1907001e6cb4fe0210c772</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_address_2</element>
+            <position>6</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>f64e799a4f1907001e6cb4fe0210c772</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_city</element>
+            <position>7</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>7a4e799a4f1907001e6cb4fe0210c772</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_state</element>
+            <position>8</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>fa4e799a4f1907001e6cb4fe0210c772</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_country</element>
+            <position>9</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>7e4e799a4f1907001e6cb4fe0210c772</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_postal_code</element>
+            <position>10</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>fe4e799a4f1907001e6cb4fe0210c772</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>11</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>724e799a4f1907001e6cb4fe0210c773</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_is_patient</element>
+            <position>12</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>f24e799a4f1907001e6cb4fe0210c773</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>provider</element>
+            <position>13</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>764e799a4f1907001e6cb4fe0210c773</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_group_name</element>
+            <position>14</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>f64e799a4f1907001e6cb4fe0210c773</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_group_number</element>
+            <position>15</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>7a4e799a4f1907001e6cb4fe0210c773</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>member_dob</element>
-            <position>8</position>
+            <position>16</position>
             <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-29 18:08:35</sys_created_on>
-            <sys_id>0aa3904b4f3c07001e6cb4fe0210c72c</sys_id>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>fa4e799a4f1907001e6cb4fe0210c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
             <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-29 18:08:35</sys_updated_on>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>member_is_patient</element>
-            <position>9</position>
+            <element>member_gender</element>
+            <position>17</position>
             <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-29 18:08:35</sys_created_on>
-            <sys_id>8aa3904b4f3c07001e6cb4fe0210c72c</sys_id>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>7e4e799a4f1907001e6cb4fe0210c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
             <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-29 18:08:35</sys_updated_on>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>platform</element>
-            <position>10</position>
+            <element>member_email</element>
+            <position>18</position>
             <sys_created_by>todd.fudala</sys_created_by>
-            <sys_created_on>2017-08-29 18:08:35</sys_created_on>
-            <sys_id>0ea3904b4f3c07001e6cb4fe0210c72c</sys_id>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>fe4e799a4f1907001e6cb4fe0210c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
             <sys_updated_by>todd.fudala</sys_updated_by>
-            <sys_updated_on>2017-08-29 18:08:35</sys_updated_on>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_phone</element>
+            <position>19</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>724e799a4f1907001e6cb4fe0210c774</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>member_fax</element>
+            <position>20</position>
+            <sys_created_by>todd.fudala</sys_created_by>
+            <sys_created_on>2017-09-21 14:30:26</sys_created_on>
+            <sys_id>f24e799a4f1907001e6cb4fe0210c774</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Member/Provider" display_value="Member/Provider" name="x_opt_ecm_case" sys_domain="global" view="Default view">56869fce4fa04300699aacb14210c70e</sys_ui_section>
+            <sys_updated_by>todd.fudala</sys_updated_by>
+            <sys_updated_on>2017-09-21 14:30:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
