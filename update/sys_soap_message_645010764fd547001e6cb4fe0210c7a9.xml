@@ -6,31 +6,31 @@
         <basic_auth_password/>
         <basic_auth_profile/>
         <basic_auth_user/>
-        <description>This soap service creates a new issue on the ORS application</description>
+        <description>ORS Issue API via AE DataPower ESB</description>
         <download_wsdl>false</download_wsdl>
-        <enable_mutual_auth>true</enable_mutual_auth>
-        <name>CreateOrUpdateIssueServiceV14Service</name>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <name>CreateOrUpdateIssueV13</name>
         <protocol_profile/>
         <sys_class_name>sys_soap_message</sys_class_name>
         <sys_created_by>todd.fudala</sys_created_by>
-        <sys_created_on>2017-09-13 15:39:10</sys_created_on>
+        <sys_created_on>2017-09-22 19:47:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>b6afb0b34f418b00699aacb14210c7cc</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>CreateOrUpdateIssueServiceV14Service</sys_name>
+        <sys_id>645010764fd547001e6cb4fe0210c7a9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>CreateOrUpdateIssueV13</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
-        <sys_update_name>sys_soap_message_b6afb0b34f418b00699aacb14210c7cc</sys_update_name>
+        <sys_update_name>sys_soap_message_645010764fd547001e6cb4fe0210c7a9</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-09-14 17:32:18</sys_updated_on>
+        <sys_updated_on>2017-09-25 16:54:20</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
-        <wsdl>https://apiengine-upm4-alpha.optum.com/soap/orsissue/CreateOrUpdateIssueV14?wsdl</wsdl>
-        <wsdl_xml><![CDATA[<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://upm4.apiengine.optum.com/orsissue/createorupdateissue/v14" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="CreateOrUpdateIssueServiceV14Service" targetNamespace="http://upm4.apiengine.optum.com/orsissue/createorupdateissue/v14">
+        <wsdl>https://aeprodproxy.uhc.com/upm3/orsissue/CreateOrUpdateIssueV13?wsdl</wsdl>
+        <wsdl_xml><![CDATA[<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="CreateOrUpdateIssueServiceV13Service" targetNamespace="http://upm3.uhc.com/orsissue/createorupdateissue/v13" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://upm3.uhc.com/orsissue/createorupdateissue/v13" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://upm4.apiengine.optum.com/orsissue/createorupdateissue/v14" xmlns:ns1="http://apiengine.optum.com" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://upm4.apiengine.optum.com/orsissue/createorupdateissue/v14">
-<xs:import namespace="http://apiengine.optum.com"/>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://upm3.uhc.com/orsissue/createorupdateissue/v13" xmlns:ns1="http://upm3.uhc.com" xmlns:tns="http://upm3.uhc.com/orsissue/createorupdateissue/v13" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://upm3.uhc.com"/>
 <xs:element name="internalUse" type="ns1:internalUse"/>
 <xs:element name="keyValuePair" type="ns1:keyValuePair"/>
 <xs:element name="logLevel" type="ns1:logLevel"/>
@@ -146,7 +146,6 @@
 </xs:complexType>
 <xs:complexType name="orsClaimInfo">
 <xs:sequence>
-<xs:element minOccurs="0" name="adjustedClaimIndicator" type="xs:string"/>
 <xs:element minOccurs="0" name="atg" type="tns:atg"/>
 <xs:element minOccurs="0" name="atgIndicator" type="xs:string"/>
 <xs:element minOccurs="0" name="authorization" type="xs:string"/>
@@ -154,6 +153,7 @@
 <xs:element minOccurs="0" name="claimAppSsn" type="xs:string"/>
 <xs:element minOccurs="0" name="claimNumber" type="xs:string"/>
 <xs:element minOccurs="0" name="claimOffice" type="xs:string"/>
+<xs:element minOccurs="0" name="claimOfficeName" type="xs:string"/>
 <xs:element minOccurs="0" name="engineCode" type="xs:string"/>
 <xs:element minOccurs="0" name="filmNumber" type="xs:string"/>
 <xs:element minOccurs="0" name="filmOffice" type="xs:string"/>
@@ -544,18 +544,6 @@
 <xs:complexType name="ServiceException">
 <xs:sequence/>
 </xs:complexType>
-<xs:element name="invokePing" type="tns:invokePing"/>
-<xs:complexType name="invokePing">
-<xs:sequence>
-<xs:element minOccurs="0" name="arg0" type="ns1:pingRequest"/>
-</xs:sequence>
-</xs:complexType>
-<xs:element name="invokePingResponse" type="tns:invokePingResponse"/>
-<xs:complexType name="invokePingResponse">
-<xs:sequence>
-<xs:element minOccurs="0" name="return" type="ns1:pingResponse"/>
-</xs:sequence>
-</xs:complexType>
 <xs:element name="invokeService" type="tns:invokeService"/>
 <xs:complexType name="invokeService">
 <xs:sequence>
@@ -568,16 +556,21 @@
 <xs:element minOccurs="0" name="return" type="tns:createOrUpdateIssueResponse"/>
 </xs:sequence>
 </xs:complexType>
-</xs:schema>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://apiengine.optum.com" xmlns:ns1="http://upm4.apiengine.optum.com/orsissue/createorupdateissue/v14" targetNamespace="http://apiengine.optum.com" version="1.0">
-<xs:import namespace="http://upm4.apiengine.optum.com/orsissue/createorupdateissue/v14"/>
-<xs:complexType name="pingRequest">
-<xs:complexContent>
-<xs:extension base="tns:requestBase">
-<xs:sequence/>
-</xs:extension>
-</xs:complexContent>
+<xs:element name="invokePing" type="tns:invokePing"/>
+<xs:complexType name="invokePing">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="ns1:pingRequest"/>
+</xs:sequence>
 </xs:complexType>
+<xs:element name="invokePingResponse" type="tns:invokePingResponse"/>
+<xs:complexType name="invokePingResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="ns1:pingResponse"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
+<xs:schema targetNamespace="http://upm3.uhc.com" version="1.0" xmlns:ns1="http://upm3.uhc.com/orsissue/createorupdateissue/v13" xmlns:tns="http://upm3.uhc.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://upm3.uhc.com/orsissue/createorupdateissue/v13"/>
 <xs:complexType abstract="true" name="requestBase">
 <xs:sequence>
 <xs:element name="requestHeader" type="tns:requestHeader"/>
@@ -611,29 +604,9 @@
 <xs:element name="uidGeneratedBy" nillable="true" type="xs:string"/>
 </xs:sequence>
 </xs:complexType>
-<xs:complexType name="pingResponse">
-<xs:complexContent>
-<xs:extension base="tns:responseBase">
-<xs:sequence>
-<xs:element maxOccurs="unbounded" minOccurs="0" name="pingHops" type="tns:pingHop"/>
-</xs:sequence>
-</xs:extension>
-</xs:complexContent>
-</xs:complexType>
 <xs:complexType abstract="true" name="responseBase">
 <xs:sequence>
 <xs:element name="responseHeader" type="tns:responseHeader"/>
-</xs:sequence>
-</xs:complexType>
-<xs:complexType name="pingHop">
-<xs:sequence>
-<xs:element minOccurs="0" name="className" type="xs:string"/>
-<xs:element minOccurs="0" name="bundleName" type="xs:string"/>
-<xs:element minOccurs="0" name="bundleVersion" type="xs:string"/>
-<xs:element minOccurs="0" name="bundleId" type="xs:string"/>
-<xs:element minOccurs="0" name="timestamp" type="xs:string"/>
-<xs:element minOccurs="0" name="applicationAuthorized" type="xs:string"/>
-<xs:element maxOccurs="unbounded" minOccurs="0" name="configurationInformation" nillable="true" type="tns:keyValuePair"/>
 </xs:sequence>
 </xs:complexType>
 <xs:complexType name="responseHeader">
@@ -643,8 +616,7 @@
 <xs:element name="serviceName" type="xs:string"/>
 <xs:element name="serviceVersion" type="xs:string"/>
 <xs:element name="logLevel" type="tns:logLevel"/>
-<xs:element name="installation" type="xs:string"/>
-<xs:element name="hostedAppEnvironment" type="xs:string"/>
+<xs:element name="upmEnvironment" type="xs:string"/>
 <xs:element maxOccurs="unbounded" minOccurs="0" name="serviceHops" nillable="true" type="tns:serviceHop"/>
 <xs:element maxOccurs="unbounded" minOccurs="0" name="statusMessages" nillable="true" type="tns:statusMessage"/>
 <xs:element name="internalUse" type="tns:internalUse"/>
@@ -666,7 +638,7 @@
 <xs:element name="statusMessageLevel" type="tns:statusMessageLevel"/>
 <xs:element name="messageType" type="xs:string"/>
 <xs:element name="statusMessage" type="xs:string"/>
-<xs:element name="hopLocation" type="xs:string"/>
+<xs:element minOccurs="0" name="hopLocation" nillable="true" type="xs:string"/>
 <xs:element minOccurs="0" name="stackTrace" nillable="true" type="xs:string"/>
 <xs:element name="statusOrigin" type="xs:string"/>
 <xs:element minOccurs="0" name="vrcStatusGroup" nillable="true" type="tns:vrcStatusGroup"/>
@@ -691,6 +663,33 @@
 <xs:element minOccurs="0" name="vr1_status_code" type="xs:string"/>
 <xs:element minOccurs="0" name="vr1_status_code_desc" type="xs:string"/>
 <xs:element minOccurs="0" name="vr1_status_code_type_desc" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="pingRequest">
+<xs:complexContent>
+<xs:extension base="tns:requestBase">
+<xs:sequence/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="pingResponse">
+<xs:complexContent>
+<xs:extension base="tns:responseBase">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="pingHops" type="tns:pingHop"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="pingHop">
+<xs:sequence>
+<xs:element minOccurs="0" name="className" type="xs:string"/>
+<xs:element minOccurs="0" name="bundleName" type="xs:string"/>
+<xs:element minOccurs="0" name="bundleVersion" type="xs:string"/>
+<xs:element minOccurs="0" name="bundleId" type="xs:string"/>
+<xs:element minOccurs="0" name="timestamp" type="xs:string"/>
+<xs:element minOccurs="0" name="applicationAuthorized" type="xs:string"/>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="configurationInformation" nillable="true" type="tns:keyValuePair"/>
 </xs:sequence>
 </xs:complexType>
 <xs:simpleType name="logLevel">
@@ -720,16 +719,16 @@
 </xs:simpleType>
 </xs:schema>
   </wsdl:types>
-  <wsdl:message name="invokeServiceResponse">
-    <wsdl:part element="tns:invokeServiceResponse" name="parameters">
-    </wsdl:part>
-  </wsdl:message>
   <wsdl:message name="invokePingResponse">
     <wsdl:part element="tns:invokePingResponse" name="parameters">
     </wsdl:part>
   </wsdl:message>
   <wsdl:message name="invokePing">
     <wsdl:part element="tns:invokePing" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="invokeServiceResponse">
+    <wsdl:part element="tns:invokeServiceResponse" name="parameters">
     </wsdl:part>
   </wsdl:message>
   <wsdl:message name="invokeService">
@@ -741,14 +740,6 @@
     </wsdl:part>
   </wsdl:message>
   <wsdl:portType name="CreateOrUpdateIssue">
-    <wsdl:operation name="invokePing">
-      <wsdl:input message="tns:invokePing" name="invokePing">
-    </wsdl:input>
-      <wsdl:output message="tns:invokePingResponse" name="invokePingResponse">
-    </wsdl:output>
-      <wsdl:fault message="tns:ServiceException" name="ServiceException">
-    </wsdl:fault>
-    </wsdl:operation>
     <wsdl:operation name="invokeService">
       <wsdl:input message="tns:invokeService" name="invokeService">
     </wsdl:input>
@@ -757,21 +748,17 @@
       <wsdl:fault message="tns:ServiceException" name="ServiceException">
     </wsdl:fault>
     </wsdl:operation>
-  </wsdl:portType>
-  <wsdl:binding name="CreateOrUpdateIssueServiceV14ServiceSoapBinding" type="tns:CreateOrUpdateIssue">
-    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="invokePing">
-      <soap:operation soapAction="" style="document"/>
-      <wsdl:input name="invokePing">
-        <soap:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output name="invokePingResponse">
-        <soap:body use="literal"/>
-      </wsdl:output>
-      <wsdl:fault name="ServiceException">
-        <soap:fault name="ServiceException" use="literal"/>
-      </wsdl:fault>
+      <wsdl:input message="tns:invokePing" name="invokePing">
+    </wsdl:input>
+      <wsdl:output message="tns:invokePingResponse" name="invokePingResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:ServiceException" name="ServiceException">
+    </wsdl:fault>
     </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CreateOrUpdateIssueServiceV13ServiceSoapBinding" type="tns:CreateOrUpdateIssue">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="invokeService">
       <soap:operation soapAction="" style="document"/>
       <wsdl:input name="invokeService">
@@ -784,10 +771,22 @@
         <soap:fault name="ServiceException" use="literal"/>
       </wsdl:fault>
     </wsdl:operation>
+    <wsdl:operation name="invokePing">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="invokePing">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="invokePingResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="CreateOrUpdateIssueServiceV14Service">
-    <wsdl:port binding="tns:CreateOrUpdateIssueServiceV14ServiceSoapBinding" name="CreateOrUpdateIssuePort">
-      <soap:address location="http://apiengine-upm4-alpha.optum.com/soap/orsissue/CreateOrUpdateIssueV14"/>
+  <wsdl:service name="CreateOrUpdateIssueServiceV13Service">
+    <wsdl:port binding="tns:CreateOrUpdateIssueServiceV13ServiceSoapBinding" name="CreateOrUpdateIssuePort">
+      <soap:address location="http://u3c.uhc.com/upm3_gateway/upm3/orsissue/CreateOrUpdateIssueV13"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>]]></wsdl_xml>
