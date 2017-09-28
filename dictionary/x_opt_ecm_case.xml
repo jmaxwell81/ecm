@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="174" type="collection">
+    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="191" type="collection">
         <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
         <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
             <choice>
@@ -17,6 +17,7 @@
             </choice>
         </element>
         <element label="Advocate Comments" max_length="4000" name="advocate_comments" type="journal_input"/>
+        <element label="Audit File" max_length="32" name="audit_file" reference="dms_document" reference_qual="type=bfedaf7f4f110b001e6cb4fe0210c758^EQ" reference_qual_condition="type=bfedaf7f4f110b001e6cb4fe0210c758^EQ" type="reference"/>
         <element choice="1" label="Business Unit" max_length="40" name="business_unit" type="choice">
             <choice>
                 <element label="Consumer Affairs" sequence="0" value="consumer_affairs"/>
@@ -35,7 +36,12 @@
         <element label="Contact Email Address" max_length="40" name="contact_email_address" type="string"/>
         <element label="Contact Fax" max_length="40" name="contact_fax" type="string"/>
         <element label="Contact First Name" max_length="40" name="contact_first_name" type="string"/>
-        <element label="Contact Gender" max_length="40" name="contact_gender" type="string"/>
+        <element choice="3" label="Contact Gender" max_length="40" name="contact_gender" type="string">
+            <choice>
+                <element label="Female" value="female"/>
+                <element label="Male" value="male"/>
+            </choice>
+        </element>
         <element label="Contact Group Name" max_length="40" name="contact_group_name" type="string"/>
         <element label="Contact Group Number" max_length="40" name="contact_group_number" type="string"/>
         <element label="Contact is Member" max_length="40" name="contact_is_member" type="boolean"/>
@@ -149,7 +155,12 @@
         <element label="Member Email" max_length="40" name="member_email" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Member Fax" max_length="40" name="member_fax" type="string"/>
         <element label="Member First Name" max_length="40" name="member_first_name" type="string"/>
-        <element label="Member Gender" max_length="40" name="member_gender" type="string"/>
+        <element choice="3" label="Member Gender" max_length="40" name="member_gender" type="string">
+            <choice>
+                <element label="Female" value="female"/>
+                <element label="Male" value="male"/>
+            </choice>
+        </element>
         <element label="Member Group Name" max_length="40" name="member_group_name" type="string"/>
         <element label="Member Group Number" max_length="40" name="member_group_number" type="string"/>
         <element label="Member is Patient" max_length="40" name="member_is_patient" type="boolean"/>
@@ -177,11 +188,33 @@
         <element label="Patient Email" max_length="40" name="patient_email" type="string"/>
         <element label="Patient Fax" max_length="40" name="patient_fax" type="string"/>
         <element label="Patient First Name" max_length="40" name="patient_first_name" type="string"/>
-        <element label="Patient Gender" max_length="40" name="patient_gender" type="string"/>
+        <element choice="3" label="Patient Gender" max_length="40" name="patient_gender" type="string">
+            <choice>
+                <element label="Female" value="female"/>
+                <element label="Male" value="male"/>
+            </choice>
+        </element>
         <element label="Patient Last Name" max_length="40" name="patient_last_name" type="string"/>
         <element label="Patient Middle Initial" max_length="40" name="patient_middle_initial" type="string"/>
         <element label="Patient Phone" max_length="40" name="patient_phone" type="string"/>
         <element label="Patient Postal Code" max_length="40" name="patient_postal_code" type="string"/>
+        <element choice="1" label="Patient Relationship" max_length="40" name="patient_relationship" type="choice">
+            <choice>
+                <element label="Child" value="child"/>
+                <element label="Collateral Dependent" value="collateral_dependent"/>
+                <element label="Domestic Partner" value="domestic_partner"/>
+                <element label="Employee" value="employee"/>
+                <element label="Handicapped Child" value="handicapped_child"/>
+                <element label="Newborn" value="newborn"/>
+                <element label="Other" value="other"/>
+                <element label="Retired Employee" value="retired_employee"/>
+                <element label="Sponsored Dependent" value="sponsored_dependent"/>
+                <element label="Spouse" value="spouse"/>
+                <element label="Stepchild" value="stepchild"/>
+                <element label="Student" value="student"/>
+                <element label="Surviving Spouse" value="surviving_spouse"/>
+            </choice>
+        </element>
         <element label="Patient SSN" max_length="40" name="patient_ssn" type="string"/>
         <element label="Patient State" max_length="40" name="patient_state" type="string"/>
         <element choice="1" label="Platform" max_length="40" name="platform" type="choice">
