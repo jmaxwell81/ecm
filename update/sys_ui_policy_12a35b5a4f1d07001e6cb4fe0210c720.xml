@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
-        <active>false</active>
-        <conditions table="x_opt_ecm_case">contact_is_member=false^state=2^ORstate=-2^EQ<item endquery="false" field="contact_is_member" goto="false" newquery="false" operator="=" or="false" value="false"/>
+        <active>true</active>
+        <conditions table="x_opt_ecm_case">contact_is_member=false^state=2^ORstate=6^ORstate=3^EQ<item endquery="false" field="contact_is_member" goto="false" newquery="false" operator="=" or="false" value="false"/>
             <item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="2"/>
-            <item endquery="false" field="state" goto="false" newquery="false" operator="=" or="true" value="-2"/>
+            <item endquery="false" field="state" goto="false" newquery="false" operator="=" or="true" value="6"/>
+            <item endquery="false" field="state" goto="false" newquery="false" operator="=" or="true" value="3"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
         <description/>
@@ -31,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>12a35b5a4f1d07001e6cb4fe0210c720</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Policy for Member SSN/Alt ID</sys_name>
         <sys_overrides/>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
@@ -40,7 +41,7 @@
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_ui_policy_12a35b5a4f1d07001e6cb4fe0210c720</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-09-27 15:29:15</sys_updated_on>
+        <sys_updated_on>2017-09-29 17:42:20</sys_updated_on>
         <table>x_opt_ecm_case</table>
         <ui_type>0</ui_type>
         <view/>

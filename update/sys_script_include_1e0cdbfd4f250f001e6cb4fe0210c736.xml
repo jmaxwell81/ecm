@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_opt_ecm.ECMIntegrations</api_name>
+        <client_callable>false</client_callable>
+        <description>Class to manage integrations for the ECM application</description>
+        <name>ECMIntegrations</name>
+        <script>var ECMIntegrations = Class.create();&#13;
+ECMIntegrations.prototype = {&#13;
+		/** V E R A C I T Y ~ www.meetveracity.com ~ **&#13;
+		* Author: Todd Fudala ~ tfudala@meetveracity.com&#13;
+&#13;
+		* Description: Class to manage integrations for the ECM application&#13;
+&#13;
+		*/&#13;
+&#13;
+		// CONSTANTS&#13;
+&#13;
+		HTTPSTATUS_SUCCESS : "200",	// Indicates a successful HTTP post of a SOAP Message&#13;
+		INSERT : "N",&#13;
+		UPDATE : "X",	&#13;
+		LOGSOURCE : "ECMIntegrations.", // Log Source&#13;
+		LOGHEADER : "{0}{1} &gt;[{2}]:\r\n{3}", // Standard prefix&#13;
+		LOG_INFO : "INFO",&#13;
+		LOG_ERROR : "ERROR",&#13;
+		LOG_DEBUG : "DEBUG",&#13;
+		LOG_EXAMPLE : "gs.error(this.LOGHEADER , this.LOGSOURCE , functName, this.LOG_ERROR, message);",&#13;
+		&#13;
+		initialize: function() {&#13;
+			&#13;
+		},&#13;
+		&#13;
+		/** V E R A C I T Y ~ www.meetveracity.com ~ **&#13;
+ 		* Author: Todd Fudala ~ tfudala@meetveracity.com&#13;
+		&#13;
+ 		* Description: Outbound SOAP API call to ORS&#13;
+		&#13;
+ 		* Parameters:&#13;
+ 		* glide_record: the current record&#13;
+ 		* insert_or_update_constant: this.INSERT or this.UPDATE&#13;
+		&#13;
+ 		* Returns: True if the call is successful, False if unsucessful&#13;
+ 		*/&#13;
+		&#13;
+		insertORS : function(glide_record, insert_or_update_constant) {&#13;
+			var functName = "insertORS()";&#13;
+			&#13;
+			var gr = new GlideRecord();&#13;
+			gr = glide_record;	&#13;
+			&#13;
+			// If this is an UPDATE set the correct code;&#13;
+			var insert_update = (insert_or_update_constant==this.UPDATE) ? 'X' : 'N'; &#13;
+			&#13;
+			// If this is an UPDATE then we are closing the issue in ORS (resolved in ECM)&#13;
+			var open_or_closed = (insert_or_update_constant==this.UPDATE) ? 'C' : 'O'; &#13;
+			&#13;
+			// Find the group number&#13;
+			var group_number = (gr.contact_is_member) ? gr.contact_group_number : gr.member_group_number; &#13;
+			&#13;
+			&#13;
+			try {&#13;
+				var s = new sn_ws.SOAPMessageV2('x_opt_ecm.CreateOrUpdateIssueV13', 'invokeService');&#13;
+				&#13;
+				//override authentication profile&#13;
+				//authentication type ='basic'&#13;
+				//r.setAuthentication(authentication type,profile name);&#13;
+				s.setStringParameterNoEscape('requestHeader.applicationInstanceName', 'ECM');&#13;
+				s.setStringParameterNoEscape('requestHeader.applicationName', 'ECM');&#13;
+				s.setStringParameterNoEscape('requestHeader.logLevel', 'DEBUG');&#13;
+				s.setStringParameterNoEscape('orsSystemParameter.logonOffice', 'XXX');&#13;
+				s.setStringParameterNoEscape('orsSystemParameter.logonId', 'XXX');&#13;
+				&#13;
+				s.setStringParameterNoEscape('member.memberNumber', group_number);&#13;
+				s.setStringParameterNoEscape('memberName.firstName', gr.member_first_name);&#13;
+				s.setStringParameterNoEscape('memberName.lastName', gr.member_last_name);&#13;
+				s.setStringParameterNoEscape('dependentName.firstName', 'ECM');&#13;
+				s.setStringParameterNoEscape('dependentName.lastName', 'TESTING');&#13;
+				s.setStringParameterNoEscape('callerName.firstName', gr.contact_first_name);&#13;
+				s.setStringParameterNoEscape('callerName.lastName', gr.contact_last_name);&#13;
+				&#13;
+				s.setStringParameterNoEscape('issue.status', open_or_closed);  // O(PEN) C(LOSED)&#13;
+				s.setStringParameterNoEscape('issue.reasonCategory', '');&#13;
+				s.setStringParameterNoEscape('issue.reasonCode', '');&#13;
+				s.setStringParameterNoEscape('issue.reasonType', ''); // Leave blank per Manish Arora&#13;
+				s.setStringParameterNoEscape('issue.callHistoryFlag', 'N'); // Default to N per Manish Arora&#13;
+				s.setStringParameterNoEscape('issue.caseNumber', gr.number); // The case number&#13;
+				s.setStringParameterNoEscape('issue.createdByApplicationIndicator', 'Q'); // Q==ECM application to ORS&#13;
+				s.setStringParameterNoEscape('issue.directionCode', 'I'); //Incoming&#13;
+				s.setStringParameterNoEscape('issue.updateType', insert_update); // This is N on initial and X on update&#13;
+				//todo: map to transaction source / verbal source / written source ?&#13;
+				s.setStringParameterNoEscape('issue.contactMethodCode', 'E'); // E – E-mail, F – Fax, M – Mail, P – Phone, W – Walk-in, I – Internet, T – IVR, V – In-house transfer&#13;
+				s.setStringParameterNoEscape('issue.priority', 'E'); //Escalated&#13;
+				//todo: map to contact relationship ?&#13;
+				s.setStringParameterNoEscape('issue.originatorTypeCode', 'EM'); // MEMBER&#13;
+				//todo: parse work notes and generate an array of &lt;comments/&gt;&#13;
+				s.setStringParameterNoEscape('issue.comments', '&lt;![CDATA[' + gr.intake_comments.getJournalEntry(-1) + ']]&gt;'); // 71 byte limit per &lt;comments/&gt; tag - oh mainframes.&#13;
+				&#13;
+				var response = s.execute();&#13;
+				var responseBody = response.getBody();&#13;
+				var status = response.getStatusCode();&#13;
+				&#13;
+				// Validate the SOAP call was successful and log results&#13;
+				if(this.orsPostAccepted(s,response, gr.number)){&#13;
+					return true;&#13;
+				}&#13;
+				&#13;
+				&#13;
+			}&#13;
+			catch(ex) {&#13;
+				var message = ex.getMessage();&#13;
+				gs.error(this.LOGHEADER , this.LOGSOURCE , functName, this.LOG_ERROR, message);&#13;
+				return false;&#13;
+			}&#13;
+		},&#13;
+		&#13;
+		/** V E R A C I T Y ~ www.meetveracity.com ~ **&#13;
+ 		* Author: Todd Fudala ~ tfudala@meetveracity.com&#13;
+		&#13;
+ 		* Description: Validates the ORS SOAP response and logs success and failure&#13;
+		&#13;
+ 		* Parameters:&#13;
+ 		* soap: the original soap request message&#13;
+ 		* soapresponse: the soap response message&#13;
+ 		* number: the ECM case number this is regarding&#13;
+		&#13;
+ 		* Returns: True if the call is successful, False if unsucessful&#13;
+ 		*/&#13;
+		&#13;
+		orsPostAccepted : function (soap, soapresponse, number)&#13;
+		{&#13;
+			var functName = "orsPostAccepted()";&#13;
+			ret = false;&#13;
+			var msg = '';&#13;
+			&#13;
+			try{&#13;
+				&#13;
+				var error_msg = soapresponse.haveError() ? soapresponse.getErrorMessage() : null;&#13;
+				var body = soapresponse.getBody();&#13;
+				var status = soapresponse.getStatusCode();&#13;
+				var doc = new XMLDocument2();&#13;
+				doc.parseXML(body); // Load XML&#13;
+				var valid_doc = doc.isValid(); // Validate&#13;
+				&#13;
+				// First test for systemic success, then functional success in the ORS response&#13;
+				if(status == this.HTTPSTATUS_SUCCESS &amp;&amp; !soapresponse.haveError()) {&#13;
+					if(!gs.nil(doc) &amp;&amp; valid_doc){&#13;
+						&#13;
+						var fault_error = doc.getNodeText("//faultcode"); // Type of fault&#13;
+						var fault_msg = doc.getNodeText("//faultstring"); // Fault description&#13;
+						var ors_issue = doc.getNodeText("//issueId"); // This indicates success creating a new ORS Issue&#13;
+						&#13;
+						if(!gs.nil(fault_error)){&#13;
+							throw new Error(fault_error + ":" + fault_msg); //Something in the API went wrong, log error&#13;
+						}&#13;
+						else if(gs.nil(ors_issue)){&#13;
+							throw new Error("An ORS Issue ID was not returned for this call."); //Looks like success but something else went wrong, log error&#13;
+						}&#13;
+						else {&#13;
+							var success_msg = "ORS Issue # " + ors_issue + " successfully created for ECM Case # :" + number; //Successful ORS Issue creation&#13;
+							gs.info(this.LOGHEADER , this.LOGSOURCE , functName, this.LOG_INFO, success_msg);&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+				else{&#13;
+					throw new Error("The SOAP call failed, HTTP response code: &gt;["&#13;
+					+ status + "], SNC error code: [" + error_msg + "], SOAP response:\r\n " + body); //Systemic error&#13;
+				}&#13;
+				&#13;
+				&#13;
+				&#13;
+			}&#13;
+			catch(e){&#13;
+				gs.error(this.LOGHEADER , this.LOGSOURCE , functName, this.LOG_ERROR, e.message);&#13;
+			}&#13;
+			return ret;&#13;
+		},&#13;
+		&#13;
+		/** V E R A C I T Y ~ www.meetveracity.com ~ **&#13;
+ 		* Author: Todd Fudala ~ tfudala@meetveracity.com&#13;
+		&#13;
+ 		* Description: Logs and returns the input for testing purposes&#13;
+		&#13;
+ 		* Parameters:&#13;
+ 		* input: input message&#13;
+		&#13;
+ 		* Returns: the input message&#13;
+ 		*/&#13;
+		&#13;
+		echo : function(input) {&#13;
+			var functName = "echo()";&#13;
+			gs.info(this.LOGHEADER , this.LOGSOURCE , functName, this.LOG_INFO, input);&#13;
+			return input;&#13;
+		},&#13;
+		&#13;
+		&#13;
+		&#13;
+		&#13;
+		type: 'ECMIntegrations'&#13;
+	};</script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>todd.fudala</sys_created_by>
+        <sys_created_on>2017-10-02 18:45:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1e0cdbfd4f250f001e6cb4fe0210c736</sys_id>
+        <sys_mod_count>77</sys_mod_count>
+        <sys_name>ECMIntegrations</sys_name>
+        <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
+        <sys_update_name>sys_script_include_1e0cdbfd4f250f001e6cb4fe0210c736</sys_update_name>
+        <sys_updated_by>todd.fudala</sys_updated_by>
+        <sys_updated_on>2017-10-03 22:07:52</sys_updated_on>
+    </sys_script_include>
+</record_update>
