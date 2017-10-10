@@ -7,7 +7,7 @@
 <p><strong>Description:</strong></p>
 <p>${description}</p>
 <p><strong>Need by Date:</strong> ${due_date}</p>]]></body>
-        <group display_value="OCA Advocate" name="OCA Advocate">dbc8d0af4f2cc300699aacb14210c774</group>
+        <group display_value="OCA Advocates" name="OCA Advocates">dbc8d0af4f2cc300699aacb14210c774</group>
         <sys_class_name>sys_email_canned_message</sys_class_name>
         <sys_created_by>craig.leonard</sys_created_by>
         <sys_created_on>2017-10-03 15:26:09</sys_created_on>
