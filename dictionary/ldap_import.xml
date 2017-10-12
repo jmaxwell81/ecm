@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="EIM/Users" max_length="40" name="ldap_import" sizeclass="1298544" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="msExchMailboxMoveSourceMDBLink" max_length="189" name="u_msexchmailbo_esourcemdblink" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="msExchMailboxMoveTargetUserBL" max_length="40" name="u_msexchmailbo_vetargetuserbl" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="msSFU30PosixMemberOf" max_length="53" name="u_mssfu30posixmemberof" type="string"/>
+    </element>
+</database>

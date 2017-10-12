@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="200" type="collection">
+    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="211" type="collection">
         <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
         <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
             <choice>
@@ -54,20 +54,20 @@
         <element label="Contact Postal Code" max_length="40" name="contact_postal_code" type="string"/>
         <element choice="1" label="Contact Relationship" max_length="40" name="contact_relationship" type="choice">
             <choice>
-                <element label="Agent/Broker" sequence="0" value="Agent/Broker"/>
-                <element label="Applicant (Not yet enrolled)" sequence="1" value="Applicant (Not yet enrolled)"/>
-                <element label="Attorney" sequence="2" value="Attorney"/>
-                <element label="Attorney General" sequence="3" value="Attorney General"/>
-                <element label="Billing/Collection Agency" sequence="4" value="Billing/Collection Agency"/>
-                <element label="Insured/Participant" sequence="5" value="Insured/Participant"/>
-                <element label="Legislator (Gvt. Official, Senator)" sequence="6" value="Legislator (Gvt. Official, Senator)"/>
-                <element label="Non-insurance Customer" sequence="7" value="Non-insurance Customer"/>
-                <element label="Other" sequence="8" value="Other"/>
-                <element label="Physician and Provider Service" sequence="9" value="Physician and Provider Service"/>
-                <element label="Policyowner/Trustee/Group" sequence="10" value="Policyowner/Trustee/Group"/>
-                <element label="Regulator (DOI, Auditor, IURO, IPRO)" sequence="11" value="Regulator (DOI, Auditor, IURO, IPRO)"/>
-                <element label="Spouse/Relative (uninsured relative to enrollee)" sequence="12" value="Spouse/Relative (uninsured relative to enrollee)"/>
-                <element label="Third Party Claimant (Another Ins. Carrier)" sequence="13" value="Third Party Claimant (Another Ins. Carrier)"/>
+                <element label="Agent/Broker" sequence="0" value="agent_broker"/>
+                <element label="Applicant (Not yet enrolled)" sequence="1" value="applicant"/>
+                <element label="Attorney" sequence="2" value="attorney"/>
+                <element label="Attorney General" sequence="3" value="attorney_general"/>
+                <element label="Billing/Collection Agency" sequence="4" value="billing_collection_agency"/>
+                <element label="Insured/Participant" sequence="5" value="insured_participant"/>
+                <element label="Legislator (Gvt. Official, Senator)" sequence="6" value="legislator"/>
+                <element label="Non-insurance Customer" sequence="7" value="non_insurance_customer"/>
+                <element label="Other" sequence="8" value="other"/>
+                <element label="Physician and Provider Service" sequence="9" value="physician_provider_service"/>
+                <element label="Policyowner/Trustee/Group" sequence="10" value="policyowner_trustee_group"/>
+                <element label="Regulator (DOI, Auditor, IURO, IPRO)" sequence="11" value="regulator"/>
+                <element label="Spouse/Relative (uninsured relative to enrollee)" sequence="12" value="spouse_relative"/>
+                <element label="Third Party Claimant (Another Ins. Carrier)" sequence="13" value="third_party"/>
             </choice>
         </element>
         <element label="Contact SSN" max_length="40" name="contact_ssn" type="string"/>
@@ -262,7 +262,12 @@
             </choice>
         </element>
         <element default="0" label="Prompt Pay Amount" max_length="20" name="resolution_prompt_pay_amount" type="currency"/>
-        <element label="Prompt Pay Violation" max_length="15" name="resolution_prompt_pay_violation" type="currency"/>
+        <element choice="3" label="Prompt Pay Violation" max_length="40" name="resolution_prompt_pay_violation" type="choice">
+            <choice>
+                <element label="No"/>
+                <element label="Yes" value="true"/>
+            </choice>
+        </element>
         <element choice="1" label="RCA Codes" max_length="40" name="resolution_rca_codes" type="choice">
             <choice/>
         </element>
