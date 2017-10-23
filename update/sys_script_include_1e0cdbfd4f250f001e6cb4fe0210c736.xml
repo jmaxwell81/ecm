@@ -303,7 +303,14 @@ ORSIntegration.prototype = {
         };
 
         result = map[contact_relationship];
-        return result;
+        // Test in case the incoming value is not found
+        if(result != "undefined") {
+          return result;
+        }
+        else {
+          return "EM";
+        }
+
 
     },
     /** V E R A C I T Y ~ www.meetveracity.com ~ **
@@ -364,7 +371,7 @@ ORSIntegration.prototype = {
         <sys_created_on>2017-10-02 18:45:10</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1e0cdbfd4f250f001e6cb4fe0210c736</sys_id>
-        <sys_mod_count>217</sys_mod_count>
+        <sys_mod_count>218</sys_mod_count>
         <sys_name>ORSIntegration</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy>read</sys_policy>
@@ -372,6 +379,6 @@ ORSIntegration.prototype = {
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_script_include_1e0cdbfd4f250f001e6cb4fe0210c736</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-10-20 14:48:16</sys_updated_on>
+        <sys_updated_on>2017-10-23 17:04:04</sys_updated_on>
     </sys_script_include>
 </record_update>
