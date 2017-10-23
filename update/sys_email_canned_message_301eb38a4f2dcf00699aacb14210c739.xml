@@ -7,7 +7,7 @@
 <p><strong>Description:</strong></p>
 <p>${description}</p>
 <p><strong>Need by Date:</strong> ${due_date}</p>]]></body>
-        <group display_value="ORA Advocate" name="ORA Advocate">44cf06064f2007001e6cb4fe0210c77f</group>
+        <group display_value="ORA Advocates" name="ORA Advocates">44cf06064f2007001e6cb4fe0210c77f</group>
         <sys_class_name>sys_email_canned_message</sys_class_name>
         <sys_created_by>craig.leonard</sys_created_by>
         <sys_created_on>2017-10-03 15:25:57</sys_created_on>

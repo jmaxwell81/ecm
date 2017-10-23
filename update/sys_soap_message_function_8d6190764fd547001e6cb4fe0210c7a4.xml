@@ -126,7 +126,13 @@
                   <totalAmount>${claim.totalAmount}</totalAmount>
                </claim>
                <!--Zero or more repetitions:-->
-               <comments>${issue.comments}</comments>
+               <comments>${issue.comments0}</comments>
+				<comments>${issue.comments1}</comments>
+				<comments>${issue.comments2}</comments>
+				<comments>${issue.comments3}</comments>
+				<comments>${issue.comments4}</comments>
+				<comments>${issue.comments5}</comments>
+
                <!--Optional:-->
                <complaintCategoryText>${issue.complaintCategoryText}</complaintCategoryText>
                <!--Optional:-->
@@ -932,7 +938,7 @@
         <sys_created_on>2017-09-22 19:51:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8d6190764fd547001e6cb4fe0210c7a4</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>invokeService</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy/>
@@ -940,7 +946,7 @@
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_soap_message_function_8d6190764fd547001e6cb4fe0210c7a4</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-10-09 16:58:29</sys_updated_on>
+        <sys_updated_on>2017-10-17 18:56:30</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server display_value="EIM_DEV">72a8728d4fc0cf40699aacb14210c789</use_mid_server>
         <use_ws_security>false</use_ws_security>

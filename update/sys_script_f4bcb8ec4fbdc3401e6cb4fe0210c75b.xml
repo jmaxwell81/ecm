@@ -7,7 +7,7 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -35,7 +35,8 @@
 	gs.include("ECMIntegrations");
 	
 	var t = new ECMIntegrations();
-	t.getOptumRxToken();
+	
+	gs.info("Getting new Token for OptumRx REST: " + t.getOptumRxToken());
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -45,7 +46,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f4bcb8ec4fbdc3401e6cb4fe0210c75b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Integration trigger - Token</sys_name>
         <sys_overrides/>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
@@ -54,7 +55,7 @@
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_script_f4bcb8ec4fbdc3401e6cb4fe0210c75b</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-10-10 20:13:01</sys_updated_on>
+        <sys_updated_on>2017-10-18 15:45:35</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

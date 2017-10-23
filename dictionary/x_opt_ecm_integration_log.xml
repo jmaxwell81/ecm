@@ -4,7 +4,8 @@
         <element label="Method" max_length="40" name="method" type="string"/>
         <element label="Request" max_length="4000" name="request" type="string"/>
         <element label="Response" max_length="4000" name="response" type="string"/>
-        <element label="Status" max_length="40" name="status" type="string"/>
+        <element label="Service Status" max_length="40" name="service_status" type="string"/>
+        <element label="HTTP Status" max_length="40" name="status" type="string"/>
         <element label="Task" max_length="32" name="task" reference="task" type="reference"/>
         <element label="URL" max_length="1024" name="url" type="url"/>
         <index name="index">

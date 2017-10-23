@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="211" type="collection">
+    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="225" type="collection">
         <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
         <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
             <choice>
@@ -86,7 +86,10 @@
         </element>
         <element label="Executive Summary" max_length="4000" name="executive_summary" type="string"/>
         <element label="File Number" max_length="40" name="file_number" type="string"/>
+        <element label="Happy" max_length="40" name="happy" type="string"/>
+        <element label="Identification" max_length="40" name="id_for_member" type="string"/>
         <element label="Intake Comments" max_length="4000" name="intake_comments" type="journal_input"/>
+        <element label="Last ORS Update" max_length="40" name="last_ors_update" type="glide_date_time"/>
         <element choice="1" label="Product Line" max_length="40" name="market_business" type="choice">
             <choice>
                 <element label="Behavioral Solutions" value="Behavioral Solutions"/>
@@ -146,7 +149,6 @@
             </choice>
         </element>
         <element label="State of Situs" max_length="32" name="market_state_of_situs" reference="x_opt_im_state_location" type="reference"/>
-        <element label="M 2" max_length="20" name="mbr_id" type="string"/>
         <element label="Member Address 1" max_length="40" name="member_address_1" type="string"/>
         <element label="Member Address 2" max_length="40" name="member_address_2" type="string"/>
         <element label="Member Alt ID" max_length="40" name="member_alt_id" type="string"/>
@@ -164,7 +166,7 @@
         </element>
         <element label="Member Group Name" max_length="40" name="member_group_name" type="string"/>
         <element label="Member Group Number" max_length="40" name="member_group_number" type="string"/>
-        <element label="M 3" max_length="12" name="member_id" type="string"/>
+        <element label="Member ID" max_length="40" name="member_identification" type="string"/>
         <element label="Member is Patient" max_length="40" name="member_is_patient" type="boolean"/>
         <element label="Member Last Name" max_length="40" name="member_last_name" type="string"/>
         <element label="Member MI" max_length="40" name="member_mi" type="string"/>
@@ -172,7 +174,6 @@
         <element label="Member Postal Code" max_length="40" name="member_postal_code" type="string"/>
         <element label="Member SSN" max_length="40" name="member_ssn" type="string"/>
         <element label="Member State" max_length="40" name="member_state" type="string"/>
-        <element label="M" max_length="15" name="mem_id" type="string"/>
         <element choice="1" label="Modification Reason" max_length="40" name="modification_reason" type="choice">
             <choice>
                 <element label="Appeal" sequence="0" value="appeal"/>
@@ -181,8 +182,8 @@
             </choice>
         </element>
         <element label="Modified Due Date" max_length="40" name="modified_due_date" type="glide_date"/>
-        <element label="Member ID" max_length="20" name="m_id" type="string"/>
         <element label="OCA/OCR Received Date" max_length="40" name="oca_ocr_received_date_time" type="glide_date_time"/>
+        <element label="ORS Issue ID" max_length="40" name="ors_issue_id" type="string"/>
         <element label="Patient Address 1" max_length="40" name="patient_address_1" type="string"/>
         <element label="Patient Address 2" max_length="40" name="patient_address_2" type="string"/>
         <element label="Patient City" max_length="40" name="patient_city" type="string"/>
@@ -257,7 +258,6 @@
                 <element label="Upheld" sequence="0" value="Upheld"/>
                 <element label="Overturned - New Information" sequence="1" value="Overturned - New Information"/>
                 <element label="Overturned - Error" sequence="2" value="Overturned - Error"/>
-                <element label="Overturned - Partially" sequence="3" value="Overturned - Partially"/>
                 <element label="Overturned - Exception" sequence="4" value="Overturned - Exception"/>
             </choice>
         </element>
@@ -285,6 +285,8 @@
         </element>
         <element label="Total overturned amounts" max_length="15" name="resolution_total_overturned_amounts" type="currency"/>
         <element label="Responsible Department" max_length="32" name="responsible_department" reference="x_opt_ecm_department" reference_qual="parent=2308c16c4fa40b00699aacb14210c71e^EQ" reference_qual_condition="parent=2308c16c4fa40b00699aacb14210c71e^EQ" type="reference"/>
+        <element label="Test 26" max_length="40" name="string_member_id" type="string"/>
+        <element label="Test 25" max_length="40" name="string_test" type="string"/>
         <element choice="1" dependent="business_unit" dependent_on_field="business_unit" label="Submission Source" max_length="40" name="submission_source" type="choice" use_dependent_field="true">
             <choice>
                 <element dependent_value="consumer_affairs" label="Attorney" value="attorney"/>
@@ -314,9 +316,8 @@
         <element choice="1" label="Submitted on behalf of" max_length="40" name="submitted_on_behalf_of" reference="x_opt_ecm_submitted_obo" type="reference">
             <choice/>
         </element>
-        <element label="Test 1" max_length="20" name="test_1" type="string"/>
-        <element label="Test 2" max_length="15" name="test_2" type="string"/>
-        <element label="Test 3" max_length="12" name="test_3" type="string"/>
+        <element label="Sunshine" max_length="40" name="sunshine" type="string"/>
+        <element label="Sample Column" max_length="40" name="the_memberid" type="string"/>
         <element choice="1" label="Transaction Source" max_length="40" name="transaction_source" type="choice">
             <choice>
                 <element label="Verbal" sequence="0" value="verbal"/>

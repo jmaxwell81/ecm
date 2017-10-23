@@ -2,37 +2,128 @@
 <record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script/>
-        <description/>
+        <client_script><![CDATA[function onSearch(){
+	var loader = document.getElementById("loading");
+	loader.className="text-center";
+}
+
+function onCancel(){
+  var loader = document.getElementById("loading");
+  loader.className="text-center hidden";
+}
+]]></client_script>
+        <description>OptumRx Search</description>
         <direct>false</direct>
-        <endpoint>x_opt_ecm_rxclaim_search.do</endpoint>
+        <endpoint>x_opt_ecm_orx_search.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link>
-	<div ng-app="angularapp">
-		<input type="text" ng-model="myVar" placeholder="Enter some text here"/>
-		
-		<div class="alert-info">{{myVar}}</div>
-			
-		<div class="">Members found<div class="badge">6</div></div>
-	</div>
-</j:jelly>]]></html>
-        <name>rxclaim_search</name>
+
+    <div class="popup-body">
+        <form name="search" class="form-horizontal">
+            <fieldset>
+                <div class="popup-content">
+                    <div class="form-group">
+                        <div class="popover-content">
+                            <label class="col-sm-2 control-label">First Name</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="member_fname" placeholder=""></input>
+                            </div>
+                            <label class="col-sm-2 control-label">Last Name</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="member_lname" placeholder=""></input>
+                            </div>
+
+                        </div>
+
+                        <div class="popover-content">
+                            <label class="col-sm-2 control-label">Member DOB</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="member_dob" placeholder="YYYYMMDD"></input>
+                            </div>
+                            <label class="col-sm-2 control-label">Member ID</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="member_id" placeholder="9 or 12 characters"></input>
+                            </div>
+                        </div>
+
+                        <div class="popover-content">
+                            <label class="col-sm-2 control-label">City</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="member_city" placeholder=""></input>
+                            </div>
+                            <label class="col-sm-2 control-label">State</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="member_state" placeholder=""></input>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+
+
+
+    <footer class="modal-footer">
+        <a class="btn btn-default" onclick="onCancel()">Cancel</a>
+        <button id="search" type="submit" class="btn btn-primary" onclick="onSearch()">Search OptumRx</button>
+    </footer>
+
+    <hr></hr>
+
+
+    <div id="loading" class="text-center hidden"><h3>Loading...</h3>
+        <div class="loading-indicator icon-loading icon-lg"></div>
+    </div>
+
+    <div id="member_results" class="table-container">
+        <table class="table table-striped table-detail-row">
+            <thead class="table-col-header">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Member ID</th>
+                <th>Carrier ID</th>
+                <th>Acccount ID</th>
+                <th>Group ID</th>
+                <th>Plan ID</th>
+                <th>Eff Date From</th>
+                <th>Eff Date To</th>
+                <tbody>
+                    <j:forEach items="${search.results}" var="i">
+                        <tr>
+                            <td>${i.memberId}</td>
+                        </tr>
+                    </j:forEach>
+                </tbody>
+
+            </thead>
+        </table>
+    </div>
+
+</j:jelly>
+]]></html>
+        <name>orx_search</name>
         <processing_script/>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>todd.fudala</sys_created_by>
         <sys_created_on>2017-10-04 17:39:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_id>
-        <sys_mod_count>17</sys_mod_count>
-        <sys_name>rxclaim_search</sys_name>
+        <sys_mod_count>140</sys_mod_count>
+        <sys_name>orx_search</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_ui_page_5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-10-06 02:44:03</sys_updated_on>
+        <sys_updated_on>2017-10-16 21:53:07</sys_updated_on>
     </sys_ui_page>
 </record_update>
