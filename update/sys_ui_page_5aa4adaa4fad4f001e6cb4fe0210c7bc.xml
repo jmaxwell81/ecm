@@ -4,24 +4,36 @@
         <category>general</category>
         <client_script><![CDATA[function onSearch() {
 
-    var loader = document.getElementById("loading");
-    loader.className = "text-center";
-    var inputs = {};
-    inputs.firstName = "WALTER";
+    this.loading(true);
+    var inputs = {
+        "firstName": "",
+        "lastName": "",
+        "dateOfBirth": "",
+        "memberNumber": "",
+        "effectiveDate": "",
+        "city": "",
+        "state": ""
+    };
+    /*inputs.firstName = "WALTER";
     inputs.lastName = "TEST";
     inputs.dateOfBirth = "19090713";
     inputs.memberNumber = "123456789";
     inputs.effectiveDate = "20110519";
-    inputs.city = "";
-    inputs.state = "";
+    inputs.city = "OKLAHOMA city";
+    inputs.state = "OK";*/
+    for (var i in inputs) {
+        inputs[i] = document.getElementById(i).value;
+        console.log(inputs[i]);
+    }
+
+
     this.memberSearch(inputs);
 
 
 }
 
 function onCancel() {
-    var loader = document.getElementById("loading");
-    loader.className = "text-center hidden";
+    this.loading(false);
 }
 
 function memberSearch(input_values) {
@@ -32,15 +44,25 @@ function memberSearch(input_values) {
     ga.addParam('sysparm_last_name', input_values.lastName);
     ga.addParam('sysparm_dob', input_values.dateOfBirth);
     ga.addParam('sysparm_member_id', input_values.memberNumber);
-    ga.addParam('sysparm_city', input_values.effectiveDate);
-    ga.addParam('sysparm_state', input_values.city);
-    ga.addParam('sysparm_eff_date', input_values.state);
+    ga.addParam('sysparm_city', input_values.city);
+    ga.addParam('sysparm_state', input_values.state);
+    ga.addParam('sysparm_eff_date', input_values.effectiveDate);
     ga.getXML(Parse);
+
+    this.loading(false);
 }
 
 function Parse(response) {
     var answer = response.responseXML.documentElement.getAttribute("answer");
     alert(answer);
+
+}
+
+function loading(is_loading) {
+    var loader = document.getElementById("loading");
+    var loading_state = (is_loading) ? "text-center" : "text-center hidden";
+    loader.className = loading_state;
+
 }
 ]]></client_script>
         <description>OptumRx Search</description>
@@ -57,11 +79,11 @@ function Parse(response) {
                         <div class="popover-content">
                             <label class="col-sm-2 control-label">First Name</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" id="member_fname" placeholder=""></input>
+                                <input type="text" class="form-control" id="firstName" placeholder=""></input>
                             </div>
                             <label class="col-sm-2 control-label">Last Name</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" id="member_lname" placeholder=""></input>
+                                <input type="text" class="form-control" id="lastName" placeholder=""></input>
                             </div>
 
                         </div>
@@ -69,26 +91,35 @@ function Parse(response) {
                         <div class="popover-content">
                             <label class="col-sm-2 control-label">Member DOB</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" id="member_dob" placeholder="YYYYMMDD"></input>
+                                <input type="text" class="form-control" id="dateOfBirth" placeholder="YYYYMMDD"></input>
                             </div>
                             <label class="col-sm-2 control-label">Member ID</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" id="member_id" placeholder="9 or 12 characters"></input>
+                                <input type="text" class="form-control" id="memberNumber" placeholder="9 or 12 characters"></input>
                             </div>
                         </div>
 
                         <div class="popover-content">
                             <label class="col-sm-2 control-label">City</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" id="member_city" placeholder=""></input>
+                                <input type="text" class="form-control" id="city" placeholder=""></input>
                             </div>
                             <label class="col-sm-2 control-label">State</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" id="member_state" placeholder=""></input>
+                                <input type="text" class="form-control" id="state" placeholder="2 characters"></input>
                             </div>
+
                         </div>
 
+                        <div class="popover-content">
+                            <label class="col-sm-2 control-label">Effective Date</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="effectiveDate" placeholder="YYYYMMDD"></input>
+                            </div>
 
+
+
+                        </div>
 
                     </div>
 
@@ -108,7 +139,8 @@ function Parse(response) {
     <hr></hr>
 
 
-    <div id="loading" class="text-center hidden"><h3>Loading...</h3>
+    <div id="loading" class="text-center hidden">
+        <h3>Loading...</h3>
         <div class="loading-indicator icon-loading icon-lg"></div>
     </div>
 
@@ -137,7 +169,6 @@ function Parse(response) {
             </thead>
         </table>
     </div>
-
 </j:jelly>
 ]]></html>
         <name>orx_search</name>
@@ -147,7 +178,7 @@ function Parse(response) {
         <sys_created_on>2017-10-04 17:39:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_id>
-        <sys_mod_count>148</sys_mod_count>
+        <sys_mod_count>185</sys_mod_count>
         <sys_name>orx_search</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy/>
@@ -155,6 +186,6 @@ function Parse(response) {
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_ui_page_5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-10-24 22:06:39</sys_updated_on>
+        <sys_updated_on>2017-10-25 18:55:04</sys_updated_on>
     </sys_ui_page>
 </record_update>

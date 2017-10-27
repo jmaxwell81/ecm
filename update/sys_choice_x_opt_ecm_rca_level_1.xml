@@ -6,7 +6,7 @@
             <element>level_1</element>
             <hint/>
             <inactive>false</inactive>
-            <label>L1 - 1</label>
+            <label>1 of 2</label>
             <language>en</language>
             <name>x_opt_ecm_rca</name>
             <sequence>0</sequence>
@@ -15,17 +15,17 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>e0c019454f420b801e6cb4fe0210c7c9</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>john.daniel</sys_updated_by>
-            <sys_updated_on>2017-10-24 20:46:10</sys_updated_on>
-            <value>L1 - 1</value>
+            <sys_updated_on>2017-10-26 17:18:33</sys_updated_on>
+            <value>1 of 2</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>level_1</element>
             <hint/>
             <inactive>false</inactive>
-            <label>L1 - 2</label>
+            <label>1 of 3</label>
             <language>en</language>
             <name>x_opt_ecm_rca</name>
             <sequence>1</sequence>
@@ -34,17 +34,17 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>64c019454f420b801e6cb4fe0210c7ca</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>john.daniel</sys_updated_by>
-            <sys_updated_on>2017-10-24 20:46:10</sys_updated_on>
-            <value>L1 - 2</value>
+            <sys_updated_on>2017-10-26 17:18:43</sys_updated_on>
+            <value>1 of 3</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>level_1</element>
             <hint/>
             <inactive>false</inactive>
-            <label>L1 - 3</label>
+            <label>1 of 4</label>
             <language>en</language>
             <name>x_opt_ecm_rca</name>
             <sequence>2</sequence>
@@ -53,10 +53,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>24c019454f420b801e6cb4fe0210c7cb</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>john.daniel</sys_updated_by>
-            <sys_updated_on>2017-10-24 20:46:10</sys_updated_on>
-            <value>L1 - 3</value>
+            <sys_updated_on>2017-10-26 17:19:06</sys_updated_on>
+            <value>1 of 4</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>level_1</element>

@@ -4,212 +4,212 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>number</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>b558e0854fcec7801e6cb4fe0210c705</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>7bea70c24f4e8b801e6cb4fe0210c75c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>state</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>3958e0854fcec7801e6cb4fe0210c705</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>33ea70c24f4e8b801e6cb4fe0210c75d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>resolved_at</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>oca_ocr_received_date_time</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>b958e0854fcec7801e6cb4fe0210c705</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>b3ea70c24f4e8b801e6cb4fe0210c75d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>oca_ocr_received_date_time</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>due_date</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>3d58e0854fcec7801e6cb4fe0210c705</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>37ea70c24f4e8b801e6cb4fe0210c75d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>responsible_department</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>member_number</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>bd58e0854fcec7801e6cb4fe0210c705</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>b7ea70c24f4e8b801e6cb4fe0210c75d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>work_notes</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>member_last_name</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>3158e0854fcec7801e6cb4fe0210c706</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>3bea70c24f4e8b801e6cb4fe0210c75d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>contact_last_name</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>member_first_name</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>6</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>b158e0854fcec7801e6cb4fe0210c706</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>bbea70c24f4e8b801e6cb4fe0210c75d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>member_first_name</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>member_mi</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>7</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>3558e0854fcec7801e6cb4fe0210c706</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>3fea70c24f4e8b801e6cb4fe0210c75d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>member_mi</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>member_dob</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>8</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>b558e0854fcec7801e6cb4fe0210c706</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>bfea70c24f4e8b801e6cb4fe0210c75d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>patient_first_name</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>sys_created_on</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>9</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>3958e0854fcec7801e6cb4fe0210c706</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>33ea70c24f4e8b801e6cb4fe0210c75e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>patient_lastname</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>sys_created_by</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>10</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>b958e0854fcec7801e6cb4fe0210c706</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>b3ea70c24f4e8b801e6cb4fe0210c75e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>patient_middle_initial</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>account.u_eid</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>11</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>3d58e0854fcec7801e6cb4fe0210c706</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>37ea70c24f4e8b801e6cb4fe0210c75e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>intake_comments</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>member_group_number</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>12</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>bd58e0854fcec7801e6cb4fe0210c706</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>b7ea70c24f4e8b801e6cb4fe0210c75e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>resolution_drug_name</element>
-            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3158e0854fcec7801e6cb4fe0210c705</list_id>
+            <element>work_notes</element>
+            <list_id display_value="x_opt_ecm_case" element="NULL" name="x_opt_ecm_case" parent="NULL" relationship="NULL" sys_domain="global" view="NULL">3fea70c24f4e8b801e6cb4fe0210c75b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>13</position>
             <sum>false</sum>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-10-24 17:49:36</sys_created_on>
-            <sys_id>3158e0854fcec7801e6cb4fe0210c707</sys_id>
+            <sys_created_on>2017-10-27 21:44:45</sys_created_on>
+            <sys_id>3bea70c24f4e8b801e6cb4fe0210c75e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-10-24 17:49:36</sys_updated_on>
+            <sys_updated_on>2017-10-27 21:44:45</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>

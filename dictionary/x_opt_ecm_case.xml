@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="228" type="collection">
+    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="245" type="collection">
         <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
         <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
             <choice>
@@ -48,9 +48,11 @@
         <element label="Contact is Patient" max_length="40" name="contact_is_patient" type="boolean"/>
         <element label="Contact Last Name" max_length="40" name="contact_last_name" type="string"/>
         <element label="Contact Middle Initial" max_length="40" name="contact_middle_initial" type="string"/>
+        <element label="Contact ID" max_length="20" name="contact_number" type="string"/>
         <element label="Contact OBO First Name" max_length="40" name="contact_obo_first_name" type="string"/>
         <element label="Contact OBO Last Name" max_length="40" name="contact_obo_last_name" type="string"/>
         <element label="Contact Phone" max_length="40" name="contact_phone" type="string"/>
+        <element label="Contact Policy Number" max_length="20" name="contact_policy_number" type="string"/>
         <element label="Contact Postal Code" max_length="40" name="contact_postal_code" type="string"/>
         <element choice="1" label="Contact Relationship" max_length="40" name="contact_relationship" type="choice">
             <choice>
@@ -167,7 +169,9 @@
         <element label="Member is Patient" max_length="40" name="member_is_patient" type="boolean"/>
         <element label="Member Last Name" max_length="40" name="member_last_name" type="string"/>
         <element label="Member MI" max_length="40" name="member_mi" type="string"/>
+        <element label="Member ID" max_length="20" name="member_number" type="string"/>
         <element label="Member Phone" max_length="40" name="member_phone" type="string"/>
+        <element label="Member Policy Number" max_length="20" name="member_policy_number" type="string"/>
         <element label="Member Postal Code" max_length="40" name="member_postal_code" type="string"/>
         <element label="Member SSN" max_length="40" name="member_ssn" type="string"/>
         <element label="Member State" max_length="40" name="member_state" type="string"/>

@@ -37,10 +37,7 @@ ORSIntegration.prototype = {
     //EXAMPLE: "gs.error(this.LOGHEADER , this.LOGSOURCE , functName, this.LOG_ERROR, message);"
 
     initialize: function() {
-
-
         this.logger = new IntegrationLogUtil();
-
     },
 
     /** V E R A C I T Y ~ www.meetveracity.com ~ **
@@ -65,8 +62,36 @@ ORSIntegration.prototype = {
         // If this is an INSERT then we are opening the issue in ORS (Case==WIP) otherwise we are closing it (Case==Resolved)
         var open_or_closed = (insert_or_update_constant == this.INSERT) ? this.OPEN : this.CLOSED;
 
-        // Find the group number, it could be on contact or member
-        var group_number = (gr.contact_is_member) ? gr.contact_group_number : gr.member_group_number;
+        // Handle Contact is Member mappings
+        var m_member_number = "";
+        var m_group_number = "";
+        var m_policy_number = "";
+        var m_first_name = "";
+        var m_last_name = "";
+        if (gr.contact_is_member) {
+            m_member_number = gr.contact_number;
+            m_group_number = gr.contact_group_number;
+            m_first_name = gr.contact_first_name;
+            m_last_name = gr.contact_last_name;
+            m_policy_number = gr.contact_policy_number;
+        } else {
+            m_member_number = gr.member_number;
+            m_group_number = gr.member_group_number;
+            m_first_name = gr.member_first_name;
+            m_last_name = gr.member_last_name;
+            m_policy_number = gr.member_policy_number;
+        }
+
+        // Handle Contact is Patient
+        var p_first_name = "";
+        var p_last_name = "";
+        if (gr.contact_is_member) {
+            p_first_name = gr.contact_first_name;
+            p_last_name = gr.contact_last_name;
+        } else {
+            p_first_name = gr.member_first_name;
+            p_last_name = gr.member_last_name;
+        }
 
         // If the transaction source is Verbal then (P)hone else (M)ail
         var transaction_source = (gr.transaction_source == 'verbal') ? this.PHONE : this.MAIL;
@@ -79,35 +104,45 @@ ORSIntegration.prototype = {
             var method = 'CreateOrUpdateIssueV13.invokeService';
 
             // header values
-            s.setStringParameterNoEscape('requestHeader.applicationInstanceName', 'ECM');
-            s.setStringParameterNoEscape('requestHeader.applicationName', 'ECM');
+            s.setStringParameterNoEscape('requestHeader.applicationInstanceName', 'ECM'); // required
+            s.setStringParameterNoEscape('requestHeader.applicationName', 'ECM'); // required
             s.setStringParameterNoEscape('requestHeader.logLevel', 'DEBUG');
-            s.setStringParameterNoEscape('orsSystemParameter.logonOffice', '888');
-            s.setStringParameterNoEscape('orsSystemParameter.logonId', 'ECM');
+            s.setStringParameterNoEscape('orsSystemParameter.logonOffice', '888'); // required
+            s.setStringParameterNoEscape('orsSystemParameter.logonId', 'ECM'); // required
             // values for the people on the case
-            s.setStringParameterNoEscape('member.memberNumber', group_number);
-            s.setStringParameterNoEscape('memberName.firstName', gr.member_first_name);
-            s.setStringParameterNoEscape('memberName.lastName', gr.member_last_name);
-            s.setStringParameterNoEscape('dependentName.firstName', gr.patient_first_name);
-            s.setStringParameterNoEscape('dependentName.lastName', gr.patient_lastname);
-            s.setStringParameterNoEscape('callerName.firstName', gr.contact_first_name);
-            s.setStringParameterNoEscape('callerName.lastName', gr.contact_last_name);
+            s.setStringParameterNoEscape('member.memberNumber', m_member_number); // PIC 9 (09)
+            s.setStringParameterNoEscape('member.groupNumber', m_group_number); // PIC 9 (07)
+            s.setStringParameterNoEscape('member.policy'), m_policy_number); // PIC X (07)
+            if (gr.contact_relationship == "spouse_relative") {
+                s.setStringParameterNoEscape('member.RelationshipCode', '01'); // Spouse
+                s.setStringParameterNoEscape('member.RelationshipSequenceNumber', '0');
+            }
+            s.setStringParameterNoEscape('memberName.firstName', m_first_name); // PIC X (01)
+            s.setStringParameterNoEscape('memberName.lastName', m_last_name); // PIC X(16)
+            s.setStringParameterNoEscape('dependentName.firstName', p_first_name); // PIC X(12)
+            s.setStringParameterNoEscape('dependentName.lastName', p_last_name); // PIC X(16)
+            s.setStringParameterNoEscape('callerName.firstName', gr.contact_first_name); // required PIC X(14)
+            s.setStringParameterNoEscape('callerName.lastName', gr.contact_last_name); // required PIC X(16)
             // values for the reported case
             s.setStringParameterNoEscape('issue.status', open_or_closed);
             s.setStringParameterNoEscape('issue.issueId', gr.ors_issue_id);
             s.setStringParameterNoEscape('issue.reasonCategory', 'GENERAL');
-            s.setStringParameterNoEscape('issue.reasonCode', 'EXECUTIVE COMPLAINT');
+            s.setStringParameterNoEscape('issue.reasonCode', 'ECOO');
             s.setStringParameterNoEscape('issue.reasonType', ''); // Leave blank per Manish Arora
             s.setStringParameterNoEscape('issue.callHistoryFlag', 'N'); // Default to N per Manish Arora
             s.setStringParameterNoEscape('issue.caseNumber', gr.number); // The case number
-            s.setStringParameterNoEscape('issue.createdByApplicationIndicator', created_by);
-            s.setStringParameterNoEscape('issue.modifiedByApplicationIndicator', modified_by);
-            s.setStringParameterNoEscape('issue.directionCode', 'I'); // (I)ncoming
-            s.setStringParameterNoEscape('issue.updateType', insert_or_update);
-            s.setStringParameterNoEscape('issue.contactMethodCode', transaction_source);
+            s.setStringParameterNoEscape('issue.createdByApplicationIndicator', created_by); //required
+            s.setStringParameterNoEscape('issue.modifiedByApplicationIndicator', modified_by); //required
+            s.setStringParameterNoEscape('issue.directionCode', 'I'); // (I)ncoming // required
+            s.setStringParameterNoEscape('issue.updateType', insert_or_update); // required
+            s.setStringParameterNoEscape('issue.contactMethodCode', transaction_source); // required
             s.setStringParameterNoEscape('issue.priority', 'N'); // (N)ormal
-            //todo: map to contact relationship ?
-            s.setStringParameterNoEscape('issue.originatorTypeCode', this.mapContactRelationship(gr.contact_relationship));
+            s.setStringParameterNoEscape('issue.originatorTypeCode', this.mapContactRelationship(gr.contact_relationship)); // required
+            s.setStringParameterNoEscape('issue.hipaaIndicator', 'N'); // required
+
+            // Add the fields that do not map to an ORS tag to a new Intake comment.
+            var newNote = this.getAdHocComment(glide_record);
+            this.addIntakeNoteToECM(newNote, glide_record);
 
             // 71 byte limit per &lt;comments/&gt; tag - oh mainframes.
             var max_note = 71;
@@ -131,6 +166,8 @@ ORSIntegration.prototype = {
                 }
 
             });
+
+
 
             // ### CALL THE SERVICE ### //
             var response = s.execute();
@@ -180,8 +217,8 @@ ORSIntegration.prototype = {
                     var fault_error = doc.getNodeText("//faultcode"); // Type of fault
                     var fault_msg = doc.getNodeText("//faultstring"); // Fault description
 
-                    // Check for Service Call Response
-                    var service_call_status = doc.getNodeText("//serviceCallStatus"); // Service call status
+                    // Check for Service Call Response or Fault, some Faults do not return serviceCallStatus
+                    var service_call_status = (gs.nil(fault_error)) ? doc.getNodeText("//serviceCallStatus") : "FAULT"; // Service call status
                     /*var status_message_level = doc.getNodeText("//statusMessageLevel"); // Service call status
                     var message_type = doc.getNodeText("//messageType"); // Service call status;
                     var status_message = doc.getNodeText("//statusMessage"); // Service call status
@@ -329,6 +366,11 @@ ORSIntegration.prototype = {
         glide_record.work_notes = message;
         glide_record.update();
     },
+
+    addIntakeNoteToECM: function(message, glide_record) {
+        glide_record.intake_comments = message;
+        glide_record.update();
+    },
     /** V E R A C I T Y ~ www.meetveracity.com ~ **
  		* Author: Todd Fudala ~ tfudala@meetveracity.com
 
@@ -362,6 +404,28 @@ ORSIntegration.prototype = {
 
     },
 
+    getAdHocComment: function(glide_record) {
+        var note = {};
+        var message = "";
+        note.fieldLabels = ["OCA/OCR Received: ",
+            "Submission Source: ",
+            "Responsible Dept: ",
+            "Due Date: ",
+            "Resolution Date: "
+        ];
+        note.fieldValues = [glide_record.oca_ocr_received_date_time,
+            glide_record.submission_source.getDisplayValue(),
+            glide_record.responsible_department.getDisplayValue(),
+            glide_record.due_date,
+            glide_record.resolution_date_resolved
+        ];
+
+        for (var j = 0; j &lt; note.fieldLabels.length; j++) {
+            message += note.fieldLabels[j] + note.fieldValues[j] + "\n";
+        }
+        return message;
+    },
+
     type: 'ORSIntegration'
 };
 </script>
@@ -370,7 +434,7 @@ ORSIntegration.prototype = {
         <sys_created_on>2017-10-02 18:45:10</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1e0cdbfd4f250f001e6cb4fe0210c736</sys_id>
-        <sys_mod_count>219</sys_mod_count>
+        <sys_mod_count>239</sys_mod_count>
         <sys_name>ORSIntegration</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy>read</sys_policy>
@@ -378,6 +442,6 @@ ORSIntegration.prototype = {
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_script_include_1e0cdbfd4f250f001e6cb4fe0210c736</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-10-24 19:28:40</sys_updated_on>
+        <sys_updated_on>2017-10-27 22:19:32</sys_updated_on>
     </sys_script_include>
 </record_update>
